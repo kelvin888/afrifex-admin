@@ -1,0 +1,112 @@
+/*
+Template Name: Afrifex Admin - Responsive Admin Template
+Author: Multipurpose Themes
+File: scss
+*/
+
+/*------------------------------------------------------------------
+[Table of contents]
+
+1. Basic Style
+2. Border radius
+3. Vertical-align
+4. Padding property, Margin property, Width property, Height property 
+5. Layout, Header
+6. sidebar 
+7. Page Content Header & Breadcrumb 
+8. progress, tab
+9. Google map Page
+10. wizard, weather 
+11. Panel, Notification, Advanced Medias 
+12. Avatar, switch, fullscreen, products-list 
+13. data table, direct-chat 
+14. Users-list
+15. carousel-control, widget, mailbox
+16. Extra Pages, lable floting, invoice, profile, calendar
+17. Extra, icon & divider, Box group, Grid-stack
+18. Date-paginator, Nestable, ribbon
+19. gallery, subheader__daterange
+20. ecommerece pages
+21. Font Icon demo style
+22. web tickers, timer, fd box, ps-scrollbar
+23. form-element, Radio Buttons, Checkboxes, Bootstrap select, form-group
+24. box, User card page
+25. card, box-comments, info-box
+26. badges, modal, mask Formatter
+27. flexbox, dropdown
+28. Statistic widgets
+29. media, blog and other widgets
+30. background and overlay
+31. blockquote, nav-dot
+32. rating, toggler
+33. box nav-tab, lookup
+34. publisher, price, todo-list
+35. chat
+36. timeline
+37. Button
+38. social media background
+39. callout, alert, tab, pagination, select2, Waves
+-------------------------------------------------------------------*/
+
+/****************************/
+/** Imports **/
+/****************************/
+@import 'variable';
+@import 'mixin';
+@import 'responsive'; 
+
+@import 'reset_basic';
+@import 'padding_margin';
+@import 'width_height';
+@import 'layout';
+@import 'header';
+@import 'sidebar';
+@import 'app';
+@import 'pages';
+@import 'perfect-scrollbar';
+@import 'form_element';
+@import 'boxes';
+@import 'ui_element';
+@import 'waves';
+
+@import 'color_theme.css';
+@import 'style_rtl.css';
+
+@import 'icons/font-awesome/css/font-awesome.css';
+@import 'icons/Ionicons/css/ionicons.css';
+@import 'icons/themify-icons/themify-icons.css';
+@import 'icons/linea-icons/linea.css';
+@import 'icons/glyphicons/glyphicon.css'; 
+@import 'icons/flag-icon-css/css/flag-icon.css';
+@import 'icons/material-design-iconic-font/css/materialdesignicons.css';
+@import 'icons/simple-line-icons/css/simple-line-icons.css';
+@import 'icons/cryptocoins-master/cryptocoins.css';
+@import 'icons/weather-icons/css/weather-icons.min.css';
+@import 'icons/iconsmind/style.css';
+
+@import '../../assets/vendor_components/animate/animate.css';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

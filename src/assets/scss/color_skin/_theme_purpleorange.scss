@@ -1,0 +1,2837 @@
+/**************************************
+Theme purpleorange Color
+**************************************/
+.bg-gradient-purpleorange 
+{
+	background-image: $theme-purpleorange-grd;
+}
+.theme-purpleorange{ 
+    .bg-gradient-purpleorange{@extend .bg-gradient-purpleorange}
+    .art-bg{@extend .bg-gradient-purpleorange}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-purpleorange
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-purpleorange}
+    }
+}
+
+.theme-purpleorange.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-purpleorange-dark
+{
+	background-image: $theme-purpleorange-grd-dark;
+}
+
+.dark-skin{
+&.theme-purpleorange{ 
+    .bg-gradient-purpleorange{@extend .bg-gradient-purpleorange-dark}
+    .art-bg{@extend .bg-gradient-purpleorange-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-purpleorange-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-purpleorange-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-purpleorange{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-purpleorange-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-purpleorange{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-purpleorange-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-purpleorange{
+    a{  
+        
+        @include hover-state{
+            color: $theme-purpleorange-primary;
+        }         
+    }
+}
+
+
+// Sidebar Theme
+.theme-purpleorange{
+    .sidebar-menu{
+        >li{
+            @include hover-active-state{
+                >a{
+                   background-image: $theme-purpleorange-grd;
+                    >i{
+                        color: $white;
+                    }
+                    >span{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .treeview-menu{
+            >li{
+                &.active{
+                    >a{
+                       color: $theme-purpleorange-info; 
+                    }
+                    >a:hover{
+                       color: $theme-purpleorange-info;  
+                    }
+                }            
+                >a:hover{
+                   color: $theme-purpleorange-info;  
+                }
+            }
+        }
+    }
+     &.sidebar-mini{
+        &.sidebar-collapse{
+            .sidebar-menu{
+                >li{
+                    >a{
+                        >span{
+                            background-image: $theme-purpleorange-grd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+    /*---Primary Button---*/
+.theme-purpleorange {
+    .btn-link {
+        color: $theme-purpleorange-primary;
+    }
+    .btn-primary {
+        background-color: $theme-purpleorange-primary;
+        border-color: $theme-purpleorange-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleorange-primary, 10%) !important;
+            border-color: darken($theme-purpleorange-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleorange-primary, 20%);
+            border-color: $theme-purpleorange-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleorange-primary, 20%);
+            border-color: $theme-purpleorange-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-primary, 10%) !important;
+            border-color: darken($theme-purpleorange-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-purpleorange-primary;
+        background-color: transparent;
+        border-color: $theme-purpleorange-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-primary, 10%) !important;
+            border-color: darken($theme-purpleorange-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-primary, 10%) !important;
+            border-color: darken($theme-purpleorange-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-purpleorange-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-primary, 10%) !important;
+            border-color: darken($theme-purpleorange-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-purpleorange {
+    .btn-info {
+        background-color: $theme-purpleorange-info;
+        border-color: $theme-purpleorange-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleorange-info, 10%) !important;
+            border-color: darken($theme-purpleorange-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleorange-info, 20%);
+            border-color: $theme-purpleorange-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleorange-info, 20%);
+            border-color: $theme-purpleorange-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-info, 10%) !important;
+            border-color: darken($theme-purpleorange-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-purpleorange-info;
+        background-color: transparent;
+        border-color: $theme-purpleorange-info;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-info, 10%) !important;
+            border-color: darken($theme-purpleorange-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-info, 10%) !important;
+            border-color: darken($theme-purpleorange-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-purpleorange-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-info, 10%) !important;
+            border-color: darken($theme-purpleorange-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-purpleorange {
+    .btn-success {
+        background-color: $theme-purpleorange-success;
+        border-color: $theme-purpleorange-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleorange-success, 10%) !important;
+            border-color: darken($theme-purpleorange-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleorange-success, 20%);
+            border-color: $theme-purpleorange-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleorange-success, 20%);
+            border-color: $theme-purpleorange-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-success, 10%) !important;
+            border-color: darken($theme-purpleorange-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-purpleorange-success;
+        background-color: transparent;
+        border-color: $theme-purpleorange-success;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-success, 10%) !important;
+            border-color: darken($theme-purpleorange-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-success, 10%) !important;
+            border-color: darken($theme-purpleorange-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-purpleorange-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-success, 10%) !important;
+            border-color: darken($theme-purpleorange-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-purpleorange {
+    .btn-danger {
+        background-color: $theme-purpleorange-danger;
+        border-color: $theme-purpleorange-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleorange-danger, 10%) !important;
+            border-color: darken($theme-purpleorange-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleorange-danger, 20%);
+            border-color: $theme-purpleorange-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleorange-danger, 20%);
+            border-color: $theme-purpleorange-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-danger, 10%) !important;
+            border-color: darken($theme-purpleorange-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-purpleorange-danger;
+        background-color: transparent;
+        border-color: $theme-purpleorange-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-danger, 10%) !important;
+            border-color: darken($theme-purpleorange-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-danger, 10%) !important;
+            border-color: darken($theme-purpleorange-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-purpleorange-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-danger, 10%) !important;
+            border-color: darken($theme-purpleorange-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-purpleorange {
+    .btn-warning {
+        background-color: $theme-purpleorange-warning;
+        border-color: $theme-purpleorange-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleorange-warning, 10%) !important;
+            border-color: darken($theme-purpleorange-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleorange-warning, 20%);
+            border-color: $theme-purpleorange-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleorange-warning, 20%);
+            border-color: $theme-purpleorange-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-warning, 10%) !important;
+            border-color: darken($theme-purpleorange-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-purpleorange-warning;
+        background-color: transparent;
+        border-color: $theme-purpleorange-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-warning, 10%) !important;
+            border-color: darken($theme-purpleorange-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleorange-warning, 10%) !important;
+            border-color: darken($theme-purpleorange-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-purpleorange-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleorange-warning, 10%) !important;
+            border-color: darken($theme-purpleorange-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-purpleorange{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-purpleorange-primary;
+        background-color: $theme-purpleorange-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-purpleorange-info;
+        background-color: $theme-purpleorange-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-purpleorange-success;
+        background-color: $theme-purpleorange-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-purpleorange-danger;
+        background-color: $theme-purpleorange-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-purpleorange-warning;
+        background-color: $theme-purpleorange-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-purpleorange{
+    .alert-primary{
+        border-color: $theme-purpleorange-primary;
+        background-color: $theme-purpleorange-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-purpleorange-info;
+        background-color: $theme-purpleorange-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-purpleorange-success;
+        background-color: $theme-purpleorange-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-purpleorange-danger;
+        background-color: $theme-purpleorange-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-purpleorange-danger;
+        background-color: $theme-purpleorange-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-purpleorange-warning;
+        background-color: $theme-purpleorange-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-purpleorange {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleorange-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleorange-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleorange-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleorange-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleorange-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleorange-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleorange-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleorange-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleorange-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleorange-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-purpleorange-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-purpleorange{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-purpleorange-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleorange-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-purpleorange-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleorange-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-purpleorange-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleorange-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-purpleorange-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleorange-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-purpleorange-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleorange-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-purpleorange {
+    .border-primary {
+        border-color: $theme-purpleorange-primary !important;
+    }
+    .border-info {
+        border-color: $theme-purpleorange-info !important;
+    }
+    .border-success {
+        border-color: $theme-purpleorange-success !important;
+    }
+    .border-danger {
+        border-color: $theme-purpleorange-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-purpleorange-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-purpleorange {
+    .bg-primary {
+      background-color: $theme-purpleorange-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-purpleorange-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-purpleorange-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-purpleorange-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-purpleorange-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-purpleorange {
+    .text-primary {
+      color: $theme-purpleorange-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-purpleorange-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-purpleorange-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-purpleorange-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-purpleorange-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-purpleorange-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-purpleorange-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-purpleorange-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-purpleorange-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-purpleorange-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-purpleorange-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-purpleorange-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-purpleorange-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-purpleorange-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-purpleorange-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-purpleorange {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-purpleorange-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-purpleorange-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-purpleorange-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-purpleorange-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-purpleorange-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-purpleorange {
+    .label-primary{
+        background-color: $theme-purpleorange-primary !important;
+    }
+    .label-info{
+        background-color: $theme-purpleorange-info !important;
+    }
+    .label-success{
+        background-color: $theme-purpleorange-success !important;
+    }
+    .label-danger{
+        background-color: $theme-purpleorange-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-purpleorange-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-purpleorange {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-purpleorange-primary;
+            
+            &:before  {
+                border-color: $theme-purpleorange-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-purpleorange-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-purpleorange-info;
+            
+            &:before  {
+                border-color: $theme-purpleorange-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-purpleorange-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-purpleorange-success;
+            
+            &:before  {
+                border-color: $theme-purpleorange-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-purpleorange-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-purpleorange-danger;
+            
+            &:before  {
+                border-color: $theme-purpleorange-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-purpleorange-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-purpleorange-warning;
+            
+            &:before  {
+                border-color: $theme-purpleorange-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-purpleorange-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleorange-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-purpleorange{ 
+    .box-primary {
+        background-color: $theme-purpleorange-primary !important;
+    &.box-bordered{
+        border-color: $theme-purpleorange-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleorange-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleorange-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-purpleorange-info !important;
+    &.box-bordered{
+        border-color: $theme-purpleorange-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleorange-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleorange-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-purpleorange-success !important;
+    &.box-bordered{
+        border-color: $theme-purpleorange-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleorange-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleorange-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-purpleorange-danger !important;
+    &.box-bordered{
+        border-color: $theme-purpleorange-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleorange-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleorange-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-purpleorange-warning !important;
+    &.box-bordered{
+        border-color: $theme-purpleorange-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleorange-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleorange-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-purpleorange-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-purpleorange-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-purpleorange-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-purpleorange-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-purpleorange {
+    .progress-bar-primary {
+        background-color: $theme-purpleorange-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-purpleorange-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-purpleorange-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-purpleorange-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-purpleorange-warning;
+    }
+}
+    /*---panel---*/
+.theme-purpleorange {
+    .panel-primary {
+        border-color: $theme-purpleorange-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleorange-primary;
+            border-color: $theme-purpleorange-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleorange-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleorange-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleorange-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-purpleorange-primary;
+          border-top-color: $theme-purpleorange-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleorange-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-purpleorange-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleorange-info;
+            border-color: $theme-purpleorange-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleorange-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleorange-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleorange-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-purpleorange-info;
+          border-top-color: $theme-purpleorange-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleorange-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-purpleorange-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleorange-success;
+            border-color: $theme-purpleorange-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleorange-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleorange-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleorange-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-purpleorange-success;
+          border-top-color: $theme-purpleorange-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleorange-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-purpleorange-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleorange-danger;
+            border-color: $theme-purpleorange-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleorange-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleorange-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleorange-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-purpleorange-danger;
+          border-top-color: $theme-purpleorange-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleorange-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-purpleorange-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleorange-warning;
+            border-color: $theme-purpleorange-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleorange-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleorange-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleorange-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-purpleorange-warning;
+          border-top-color: $theme-purpleorange-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleorange-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-purpleorange {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-purpleorange-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleorange-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleorange-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleorange-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleorange-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleorange-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-purpleorange {
+    .badge-primary {
+        background-color: $theme-purpleorange-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleorange-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-purpleorange-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleorange-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-purpleorange-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleorange-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-purpleorange-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleorange-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-purpleorange-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleorange-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-purpleorange {
+    .rating-primary {
+        .active {
+            color: $theme-purpleorange-primary;
+        }
+        :checked ~ label {
+            color: $theme-purpleorange-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleorange-primary;
+                ~ label {
+                    color: $theme-purpleorange-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-purpleorange-info;
+        }
+        :checked ~ label {
+            color: $theme-purpleorange-info;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleorange-info;
+                ~ label {
+                    color: $theme-purpleorange-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-purpleorange-success;
+        }
+        :checked ~ label {
+            color: $theme-purpleorange-success;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleorange-success;
+                ~ label {
+                    color: $theme-purpleorange-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-purpleorange-danger;
+        }
+        :checked ~ label {
+            color: $theme-purpleorange-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleorange-danger;
+                ~ label {
+                    color: $theme-purpleorange-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-purpleorange-warning;
+        }
+        :checked ~ label {
+            color: $theme-purpleorange-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleorange-warning;
+                ~ label {
+                    color: $theme-purpleorange-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-purpleorange {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-purpleorange-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-purpleorange-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-purpleorange-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-purpleorange-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-purpleorange-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-purpleorange {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleorange-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleorange-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleorange-info, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleorange-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleorange-success, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleorange-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleorange-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleorange-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleorange-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleorange-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleorange-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleorange-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleorange-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleorange-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleorange-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-purpleorange-primary;
+            background-color: $theme-purpleorange-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-purpleorange-primary;
+                background-color: $theme-purpleorange-primary;
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-purpleorange-primary;
+                background-color: $theme-purpleorange-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-purpleorange-primary;
+                    background-color: $theme-purpleorange-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-purpleorange {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-purpleorange-primary;
+        }
+        .info {
+            border-left-color: $theme-purpleorange-primary;
+        }
+        .success {
+            border-left-color: $theme-purpleorange-success;
+        }
+        .danger {
+            border-left-color: $theme-purpleorange-danger;
+        }
+        .warning {
+            border-left-color: $theme-purpleorange-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-purpleorange {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-purpleorange-primary;
+                  border: 1px solid  $theme-purpleorange-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleorange-primary;
+                  border-right-color: $theme-purpleorange-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-purpleorange-info;
+                  border: 1px solid  $theme-purpleorange-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleorange-info;
+                  border-right-color: $theme-purpleorange-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-purpleorange-success;
+                  border: 1px solid  $theme-purpleorange-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleorange-success;
+                  border-right-color: $theme-purpleorange-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-purpleorange-danger;
+                  border: 1px solid  $theme-purpleorange-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleorange-danger;
+                  border-right-color: $theme-purpleorange-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-purpleorange-warning;
+                  border: 1px solid  $theme-purpleorange-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleorange-warning;
+                  border-right-color: $theme-purpleorange-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-purpleorange-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-purpleorange-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-purpleorange-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-purpleorange-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-purpleorange-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-purpleorange-primary;
+            }
+            .label-info {
+                background-color: $theme-purpleorange-info;
+            }
+            .label-success {
+                background-color: $theme-purpleorange-success;
+            }
+            .label-danger {
+                background-color: $theme-purpleorange-danger;
+            }
+            .label-warning {
+                background-color: $theme-purpleorange-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-purpleorange-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-purpleorange-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-purpleorange{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-purpleorange-primary; 
+                &:hover{
+                   background-color: $theme-purpleorange-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-purpleorange-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-purpleorange-primary;
+                background-color: $theme-purpleorange-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-purpleorange{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-purpleorange-primary;
+                        color: $theme-purpleorange-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-purpleorange-primary;
+                        color: $theme-purpleorange-primary;
+                        @include hover-state{
+                            border-color: $theme-purpleorange-primary;
+                            color: $theme-purpleorange-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-purpleorange-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-purpleorange{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-purpleorange-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-purpleorange-primary;
+	                   background-color: $theme-purpleorange-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-purpleorange-primary;
+	                   background-color: $theme-purpleorange-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-purpleorange-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-purpleorange-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-purpleorange-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-purpleorange-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-purpleorange-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-purpleorange-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-purpleorange {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-purpleorange-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-purpleorange-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-purpleorange-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-purpleorange-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleorange-primary;
+                    border-bottom: 2px solid $theme-purpleorange-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleorange-info;
+                    border-bottom: 2px solid $theme-purpleorange-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleorange-success;
+                    border-bottom: 2px solid $theme-purpleorange-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleorange-danger;
+                    border-bottom: 2px solid $theme-purpleorange-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleorange-warning;
+                    border-bottom: 2px solid $theme-purpleorange-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleorange-primary;
+                    background-color: $theme-purpleorange-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleorange-info;
+                    background-color: $theme-purpleorange-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleorange-success;
+                    background-color: $theme-purpleorange-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleorange-danger;
+                    background-color: $theme-purpleorange-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleorange-warning;
+                    background-color: $theme-purpleorange-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-primary;
+                    border-color: $theme-purpleorange-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleorange-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-primary;
+                    border: 2px solid $theme-purpleorange-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-info;
+                    border-color: $theme-purpleorange-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleorange-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-info;
+                    border: 2px solid $theme-purpleorange-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-success;
+                    border-color: $theme-purpleorange-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleorange-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-success;
+                    border: 2px solid $theme-purpleorange-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-danger;
+                    border-color: $theme-purpleorange-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleorange-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-danger;
+                    border: 2px solid $theme-purpleorange-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-warning;
+                    border-color: $theme-purpleorange-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleorange-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleorange-warning;
+                    border: 2px solid $theme-purpleorange-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleorange-primary;
+                    border-bottom: 2px solid $theme-purpleorange-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleorange-primary;
+                    background-color: $theme-purpleorange-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-purpleorange-primary;
+                }
+                &:after {
+                    background-color: $theme-purpleorange-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleorange-primary;
+                    background-color: $theme-purpleorange-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-purpleorange-primary;
+                    background-color: $theme-purpleorange-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-purpleorange{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-purpleorange-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-purpleorange-primary;
+                border-color: $theme-purpleorange-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-purpleorange-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-purpleorange {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-purpleorange-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-purpleorange-primary;
+                        color: $theme-purpleorange-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-purpleorange-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-purpleorange {
+    .jq-icon-primary { 
+        background-color: $theme-purpleorange-primary; 
+        color: $white; 
+        border-color: $theme-purpleorange-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-purpleorange-info; 
+        color: $white; 
+        border-color: $theme-purpleorange-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-purpleorange-success; 
+        color: $white; 
+        border-color: $theme-purpleorange-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-purpleorange-danger; 
+        color: $white; 
+        border-color: $theme-purpleorange-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-purpleorange-danger; 
+        color: $white; 
+        border-color: $theme-purpleorange-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-purpleorange-warning; 
+        color: $white; 
+        border-color: $theme-purpleorange-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-purpleorange {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-purpleorange-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-purpleorange-info;
+        }
+        &.status-success::after {
+            background-color: $theme-purpleorange-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-purpleorange-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-purpleorange-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-purpleorange-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-purpleorange-primary, 10%);
+        border-color: darken($theme-purpleorange-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-purpleorange {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-purpleorange-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-purpleorange-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-purpleorange{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-purpleorange-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-purpleorange-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-purpleorange-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-purpleorange{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-purpleorange-primary;
+                        &:hover{
+                            border-left-color: $theme-purpleorange-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-purpleorange{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-purpleorange-primary;
+                    background-color: $theme-purpleorange-primary;
+                    &:hover{
+                        border: 1px solid $theme-purpleorange-primary;
+                        background-color: $theme-purpleorange-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-purpleorange-primary, 10%);
+                    background-color: darken($theme-purpleorange-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-purpleorange-primary;
+                background-color: $theme-purpleorange-primary;
+                    &:hover{
+                        border: 1px solid $theme-purpleorange-primary;
+                        background-color: $theme-purpleorange-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-purpleorange-primary;
+                }
+                &:hover a{
+                    background-color: $theme-purpleorange-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-purpleorange-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-purpleorange {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-purpleorange-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-purpleorange {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-purpleorange-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-purpleorange-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-purpleorange-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-purpleorange-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-purpleorange-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-purpleorange-primary;
+                border-color: $theme-purpleorange-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-purpleorange{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-purpleorange-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-purpleorange-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-purpleorange-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-purpleorange-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-purpleorange{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-purpleorange-primary;
+                        background-color: $theme-purpleorange-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-purpleorange-primary, 10%);
+                        background-color: darken($theme-purpleorange-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-purpleorange-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-purpleorange-primary;
+                        }
+                       &:before{
+                            background-color: $theme-purpleorange-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-purpleorange-primary;
+                        }
+                       &:before{
+                            background-color: $theme-purpleorange-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-purpleorange-primary;
+                                color: $theme-purpleorange-primary;
+                                &:after{
+                                    border-top-color: $theme-purpleorange-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-purpleorange-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-purpleorange{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-purpleorange-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-purpleorange{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-purpleorange-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-purpleorange{
+    #primary {
+        .slider-selection{
+            background-color: $theme-purpleorange-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-purpleorange-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-purpleorange-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-purpleorange-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-purpleorange-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-purpleorange{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-purpleorange-primary;
+	                    border-color: $theme-purpleorange-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-purpleorange-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-purpleorange-primary;
+        }
+        a{
+            color: $theme-purpleorange-primary; 
+            @include hover-focus-state{
+                color: $theme-purpleorange-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-purpleorange-primary;    
+            }
+        }
+    }
+}

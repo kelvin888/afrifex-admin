@@ -1,0 +1,2839 @@
+/**************************************
+Theme purpleamber Color 
+**************************************/
+.bg-gradient-purpleamber 
+{
+	background-image: $theme-purpleamber-grd;
+}
+.theme-purpleamber{ 
+    .bg-gradient-purpleamber{@extend .bg-gradient-purpleamber}
+    .art-bg{@extend .bg-gradient-purpleamber}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-purpleamber
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-purpleamber}
+    }
+}
+
+.theme-purpleamber.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-purpleamber-dark
+{
+	background-image: $theme-purpleamber-grd-dark;
+}
+
+.dark-skin{
+&.theme-purpleamber{ 
+    .bg-gradient-purpleamber{@extend .bg-gradient-purpleamber-dark}
+    .art-bg{@extend .bg-gradient-purpleamber-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-purpleamber-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-purpleamber-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-purpleamber{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-purpleamber-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-purpleamber{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-purpleamber-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-purpleamber{
+    a{  
+        
+        @include hover-state{
+            color: $theme-purpleamber-primary;
+        }         
+    }
+}
+
+
+// Sidebar Theme
+.theme-purpleamber{
+    .sidebar-menu{
+        >li{
+            @include hover-active-state{
+                >a{
+                   background-image: $theme-purpleamber-grd;
+                    >i{
+                        color: $white;
+                    }
+                    >span{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .treeview-menu{
+            >li{
+                &.active{
+                    >a{
+                       color: $theme-purpleamber-primary; 
+                    }
+                    >a:hover{
+                       color: $theme-purpleamber-primary;  
+                    }
+                }            
+                >a:hover{
+                   color: $theme-purpleamber-primary;  
+                }
+            }
+        }
+    }
+     &.sidebar-mini{
+        &.sidebar-collapse{
+            .sidebar-menu{
+                >li{
+                    >a{
+                        >span{
+                            background-image: $theme-purpleamber-grd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+    /*---Primary Button---*/
+.theme-purpleamber {
+    .btn-link {
+        color: $theme-purpleamber-primary;
+    }
+    .btn-primary {
+        background-color: $theme-purpleamber-primary;
+        border-color: $theme-purpleamber-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleamber-primary, 10%) !important;
+            border-color: darken($theme-purpleamber-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleamber-primary, 20%);
+            border-color: $theme-purpleamber-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleamber-primary, 20%);
+            border-color: $theme-purpleamber-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-primary, 10%) !important;
+            border-color: darken($theme-purpleamber-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-purpleamber-primary;
+        background-color: transparent;
+        border-color: $theme-purpleamber-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-primary, 10%) !important;
+            border-color: darken($theme-purpleamber-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-primary, 10%) !important;
+            border-color: darken($theme-purpleamber-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-purpleamber-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-primary, 10%) !important;
+            border-color: darken($theme-purpleamber-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-purpleamber {
+    .btn-info {
+        background-color: $theme-purpleamber-info;
+        border-color: $theme-purpleamber-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleamber-info, 10%) !important;
+            border-color: darken($theme-purpleamber-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleamber-info, 20%);
+            border-color: $theme-purpleamber-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleamber-info, 20%);
+            border-color: $theme-purpleamber-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-info, 10%) !important;
+            border-color: darken($theme-purpleamber-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-purpleamber-info;
+        background-color: transparent;
+        border-color: $theme-purpleamber-info;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-info, 10%) !important;
+            border-color: darken($theme-purpleamber-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-info, 10%) !important;
+            border-color: darken($theme-purpleamber-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-purpleamber-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-info, 10%) !important;
+            border-color: darken($theme-purpleamber-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-purpleamber {
+    .btn-success {
+        background-color: $theme-purpleamber-success;
+        border-color: $theme-purpleamber-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleamber-success, 10%) !important;
+            border-color: darken($theme-purpleamber-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleamber-success, 20%);
+            border-color: $theme-purpleamber-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleamber-success, 20%);
+            border-color: $theme-purpleamber-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-success, 10%) !important;
+            border-color: darken($theme-purpleamber-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-purpleamber-success;
+        background-color: transparent;
+        border-color: $theme-purpleamber-success;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-success, 10%) !important;
+            border-color: darken($theme-purpleamber-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-success, 10%) !important;
+            border-color: darken($theme-purpleamber-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-purpleamber-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-success, 10%) !important;
+            border-color: darken($theme-purpleamber-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-purpleamber {
+    .btn-danger {
+        background-color: $theme-purpleamber-danger;
+        border-color: $theme-purpleamber-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleamber-danger, 10%) !important;
+            border-color: darken($theme-purpleamber-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleamber-danger, 20%);
+            border-color: $theme-purpleamber-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleamber-danger, 20%);
+            border-color: $theme-purpleamber-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-danger, 10%) !important;
+            border-color: darken($theme-purpleamber-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-purpleamber-danger;
+        background-color: transparent;
+        border-color: $theme-purpleamber-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-danger, 10%) !important;
+            border-color: darken($theme-purpleamber-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-danger, 10%) !important;
+            border-color: darken($theme-purpleamber-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-purpleamber-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-danger, 10%) !important;
+            border-color: darken($theme-purpleamber-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-purpleamber {
+    .btn-warning {
+        background-color: $theme-purpleamber-warning;
+        border-color: $theme-purpleamber-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-purpleamber-warning, 10%) !important;
+            border-color: darken($theme-purpleamber-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-purpleamber-warning, 20%);
+            border-color: $theme-purpleamber-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-purpleamber-warning, 20%);
+            border-color: $theme-purpleamber-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-warning, 10%) !important;
+            border-color: darken($theme-purpleamber-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-purpleamber-warning;
+        background-color: transparent;
+        border-color: $theme-purpleamber-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-warning, 10%) !important;
+            border-color: darken($theme-purpleamber-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-purpleamber-warning, 10%) !important;
+            border-color: darken($theme-purpleamber-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-purpleamber-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-purpleamber-warning, 10%) !important;
+            border-color: darken($theme-purpleamber-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-purpleamber{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-purpleamber-primary;
+        background-color: $theme-purpleamber-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-purpleamber-info;
+        background-color: $theme-purpleamber-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-purpleamber-success;
+        background-color: $theme-purpleamber-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-purpleamber-danger;
+        background-color: $theme-purpleamber-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-purpleamber-warning;
+        background-color: $theme-purpleamber-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-purpleamber{
+    .alert-primary{
+        border-color: $theme-purpleamber-primary;
+        background-color: $theme-purpleamber-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-purpleamber-info;
+        background-color: $theme-purpleamber-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-purpleamber-success;
+        background-color: $theme-purpleamber-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-purpleamber-danger;
+        background-color: $theme-purpleamber-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-purpleamber-danger;
+        background-color: $theme-purpleamber-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-purpleamber-warning;
+        background-color: $theme-purpleamber-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-purpleamber {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleamber-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleamber-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleamber-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleamber-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleamber-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleamber-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleamber-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleamber-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-purpleamber-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-purpleamber-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-purpleamber-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-purpleamber{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-purpleamber-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleamber-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-purpleamber-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleamber-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-purpleamber-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleamber-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-purpleamber-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleamber-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-purpleamber-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-purpleamber-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-purpleamber {
+    .border-primary {
+        border-color: $theme-purpleamber-primary !important;
+    }
+    .border-info {
+        border-color: $theme-purpleamber-info !important;
+    }
+    .border-success {
+        border-color: $theme-purpleamber-success !important;
+    }
+    .border-danger {
+        border-color: $theme-purpleamber-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-purpleamber-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-purpleamber {
+    .bg-primary {
+      background-color: $theme-purpleamber-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-purpleamber-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-purpleamber-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-purpleamber-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-purpleamber-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-purpleamber {
+    .text-primary {
+      color: $theme-purpleamber-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-purpleamber-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-purpleamber-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-purpleamber-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-purpleamber-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-purpleamber-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-purpleamber-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-purpleamber-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-purpleamber-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-purpleamber-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-purpleamber-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-purpleamber-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-purpleamber-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-purpleamber-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-purpleamber-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-purpleamber {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-purpleamber-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-purpleamber-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-purpleamber-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-purpleamber-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-purpleamber-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-purpleamber {
+    .label-primary{
+        background-color: $theme-purpleamber-primary !important;
+    }
+    .label-info{
+        background-color: $theme-purpleamber-info !important;
+    }
+    .label-success{
+        background-color: $theme-purpleamber-success !important;
+    }
+    .label-danger{
+        background-color: $theme-purpleamber-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-purpleamber-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-purpleamber {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-purpleamber-primary;
+            
+            &:before  {
+                border-color: $theme-purpleamber-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-purpleamber-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-purpleamber-info;
+            
+            &:before  {
+                border-color: $theme-purpleamber-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-purpleamber-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-purpleamber-success;
+            
+            &:before  {
+                border-color: $theme-purpleamber-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-purpleamber-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-purpleamber-danger;
+            
+            &:before  {
+                border-color: $theme-purpleamber-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-purpleamber-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-purpleamber-warning;
+            
+            &:before  {
+                border-color: $theme-purpleamber-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-purpleamber-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-purpleamber-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-purpleamber{ 
+    .box-primary {
+        background-color: $theme-purpleamber-primary !important;
+    &.box-bordered{
+        border-color: $theme-purpleamber-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleamber-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleamber-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-purpleamber-info !important;
+    &.box-bordered{
+        border-color: $theme-purpleamber-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleamber-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleamber-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-purpleamber-success !important;
+    &.box-bordered{
+        border-color: $theme-purpleamber-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleamber-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleamber-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-purpleamber-danger !important;
+    &.box-bordered{
+        border-color: $theme-purpleamber-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleamber-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleamber-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-purpleamber-warning !important;
+    &.box-bordered{
+        border-color: $theme-purpleamber-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-purpleamber-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-purpleamber-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-purpleamber-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-purpleamber-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-purpleamber-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-purpleamber-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-purpleamber {
+    .progress-bar-primary {
+        background-color: $theme-purpleamber-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-purpleamber-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-purpleamber-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-purpleamber-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-purpleamber-warning;
+    }
+}
+    /*---panel---*/
+.theme-purpleamber {
+    .panel-primary {
+        border-color: $theme-purpleamber-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleamber-primary;
+            border-color: $theme-purpleamber-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleamber-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleamber-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleamber-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-purpleamber-primary;
+          border-top-color: $theme-purpleamber-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleamber-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-purpleamber-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleamber-info;
+            border-color: $theme-purpleamber-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleamber-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleamber-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleamber-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-purpleamber-info;
+          border-top-color: $theme-purpleamber-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleamber-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-purpleamber-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleamber-success;
+            border-color: $theme-purpleamber-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleamber-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleamber-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleamber-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-purpleamber-success;
+          border-top-color: $theme-purpleamber-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleamber-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-purpleamber-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleamber-danger;
+            border-color: $theme-purpleamber-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleamber-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleamber-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleamber-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-purpleamber-danger;
+          border-top-color: $theme-purpleamber-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleamber-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-purpleamber-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-purpleamber-warning;
+            border-color: $theme-purpleamber-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-purpleamber-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-purpleamber-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-purpleamber-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-purpleamber-warning;
+          border-top-color: $theme-purpleamber-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-purpleamber-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-purpleamber {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-purpleamber-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleamber-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleamber-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleamber-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleamber-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-purpleamber-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-purpleamber {
+    .badge-primary {
+        background-color: $theme-purpleamber-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleamber-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-purpleamber-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleamber-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-purpleamber-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleamber-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-purpleamber-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleamber-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-purpleamber-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-purpleamber-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-purpleamber {
+    .rating-primary {
+        .active {
+            color: $theme-purpleamber-primary;
+        }
+        :checked ~ label {
+            color: $theme-purpleamber-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleamber-primary;
+                ~ label {
+                    color: $theme-purpleamber-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-purpleamber-info;
+        }
+        :checked ~ label {
+            color: $theme-purpleamber-info;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleamber-info;
+                ~ label {
+                    color: $theme-purpleamber-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-purpleamber-success;
+        }
+        :checked ~ label {
+            color: $theme-purpleamber-success;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleamber-success;
+                ~ label {
+                    color: $theme-purpleamber-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-purpleamber-danger;
+        }
+        :checked ~ label {
+            color: $theme-purpleamber-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleamber-danger;
+                ~ label {
+                    color: $theme-purpleamber-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-purpleamber-warning;
+        }
+        :checked ~ label {
+            color: $theme-purpleamber-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-purpleamber-warning;
+                ~ label {
+                    color: $theme-purpleamber-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-purpleamber {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-purpleamber-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-purpleamber-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-purpleamber-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-purpleamber-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-purpleamber-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-purpleamber {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleamber-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleamber-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleamber-info, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleamber-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleamber-success, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleamber-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleamber-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleamber-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-purpleamber-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-purpleamber-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleamber-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleamber-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleamber-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleamber-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-purpleamber-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-purpleamber-primary;
+            background-color: $theme-purpleamber-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-purpleamber-primary;
+                background-color: $theme-purpleamber-primary;
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-purpleamber-primary;
+                background-color: $theme-purpleamber-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-purpleamber-primary;
+                    background-color: $theme-purpleamber-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-purpleamber {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-purpleamber-primary;
+        }
+        .info {
+            border-left-color: $theme-purpleamber-primary;
+        }
+        .success {
+            border-left-color: $theme-purpleamber-success;
+        }
+        .danger {
+            border-left-color: $theme-purpleamber-danger;
+        }
+        .warning {
+            border-left-color: $theme-purpleamber-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-purpleamber {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-purpleamber-primary;
+                  border: 1px solid  $theme-purpleamber-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleamber-primary;
+                  border-right-color: $theme-purpleamber-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-purpleamber-info;
+                  border: 1px solid  $theme-purpleamber-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleamber-info;
+                  border-right-color: $theme-purpleamber-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-purpleamber-success;
+                  border: 1px solid  $theme-purpleamber-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleamber-success;
+                  border-right-color: $theme-purpleamber-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-purpleamber-danger;
+                  border: 1px solid  $theme-purpleamber-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleamber-danger;
+                  border-right-color: $theme-purpleamber-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-purpleamber-warning;
+                  border: 1px solid  $theme-purpleamber-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-purpleamber-warning;
+                  border-right-color: $theme-purpleamber-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-purpleamber-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-purpleamber-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-purpleamber-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-purpleamber-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-purpleamber-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-purpleamber-primary;
+            }
+            .label-info {
+                background-color: $theme-purpleamber-info;
+            }
+            .label-success {
+                background-color: $theme-purpleamber-success;
+            }
+            .label-danger {
+                background-color: $theme-purpleamber-danger;
+            }
+            .label-warning {
+                background-color: $theme-purpleamber-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-purpleamber-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-purpleamber-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-purpleamber{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-purpleamber-primary; 
+                &:hover{
+                   background-color: $theme-purpleamber-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-purpleamber-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-purpleamber-primary;
+                background-color: $theme-purpleamber-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-purpleamber{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-purpleamber-primary;
+                        color: $theme-purpleamber-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-purpleamber-primary;
+                        color: $theme-purpleamber-primary;
+                        @include hover-state{
+                            border-color: $theme-purpleamber-primary;
+                            color: $theme-purpleamber-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-purpleamber-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-purpleamber{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-purpleamber-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-purpleamber-primary;
+	                   background-color: $theme-purpleamber-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-purpleamber-primary;
+	                   background-color: $theme-purpleamber-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-purpleamber-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-purpleamber-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-purpleamber-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-purpleamber-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-purpleamber-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-purpleamber-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-purpleamber {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-purpleamber-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-purpleamber-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-purpleamber-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-purpleamber-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleamber-primary;
+                    border-bottom: 2px solid $theme-purpleamber-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleamber-info;
+                    border-bottom: 2px solid $theme-purpleamber-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleamber-success;
+                    border-bottom: 2px solid $theme-purpleamber-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleamber-danger;
+                    border-bottom: 2px solid $theme-purpleamber-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleamber-warning;
+                    border-bottom: 2px solid $theme-purpleamber-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleamber-primary;
+                    background-color: $theme-purpleamber-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleamber-info;
+                    background-color: $theme-purpleamber-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleamber-success;
+                    background-color: $theme-purpleamber-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleamber-danger;
+                    background-color: $theme-purpleamber-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleamber-warning;
+                    background-color: $theme-purpleamber-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-primary;
+                    border-color: $theme-purpleamber-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleamber-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-primary;
+                    border: 2px solid $theme-purpleamber-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-info;
+                    border-color: $theme-purpleamber-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleamber-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-info;
+                    border: 2px solid $theme-purpleamber-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-success;
+                    border-color: $theme-purpleamber-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleamber-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-success;
+                    border: 2px solid $theme-purpleamber-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-danger;
+                    border-color: $theme-purpleamber-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleamber-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-danger;
+                    border: 2px solid $theme-purpleamber-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-warning;
+                    border-color: $theme-purpleamber-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-purpleamber-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-purpleamber-warning;
+                    border: 2px solid $theme-purpleamber-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-purpleamber-primary;
+                    border-bottom: 2px solid $theme-purpleamber-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleamber-primary;
+                    background-color: $theme-purpleamber-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-purpleamber-primary;
+                }
+                &:after {
+                    background-color: $theme-purpleamber-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-purpleamber-primary;
+                    background-color: $theme-purpleamber-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-purpleamber-primary;
+                    background-color: $theme-purpleamber-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-purpleamber{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-purpleamber-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-purpleamber-primary;
+                border-color: $theme-purpleamber-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-purpleamber-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-purpleamber {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-purpleamber-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-purpleamber-primary;
+                        color: $theme-purpleamber-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-purpleamber-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-purpleamber {
+    .jq-icon-primary { 
+        background-color: $theme-purpleamber-primary; 
+        color: $white; 
+        border-color: $theme-purpleamber-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-purpleamber-info; 
+        color: $white; 
+        border-color: $theme-purpleamber-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-purpleamber-success; 
+        color: $white; 
+        border-color: $theme-purpleamber-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-purpleamber-danger; 
+        color: $white; 
+        border-color: $theme-purpleamber-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-purpleamber-danger; 
+        color: $white; 
+        border-color: $theme-purpleamber-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-purpleamber-warning; 
+        color: $white; 
+        border-color: $theme-purpleamber-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-purpleamber {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-purpleamber-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-purpleamber-info;
+        }
+        &.status-success::after {
+            background-color: $theme-purpleamber-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-purpleamber-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-purpleamber-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-purpleamber-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-purpleamber-primary, 10%);
+        border-color: darken($theme-purpleamber-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-purpleamber {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-purpleamber-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-purpleamber-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-purpleamber{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-purpleamber-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-purpleamber-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-purpleamber-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-purpleamber{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-purpleamber-primary;
+                        &:hover{
+                            border-left-color: $theme-purpleamber-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-purpleamber{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-purpleamber-primary;
+                    background-color: $theme-purpleamber-primary;
+                    &:hover{
+                        border: 1px solid $theme-purpleamber-primary;
+                        background-color: $theme-purpleamber-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-purpleamber-primary, 10%);
+                    background-color: darken($theme-purpleamber-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-purpleamber-primary;
+                background-color: $theme-purpleamber-primary;
+                    &:hover{
+                        border: 1px solid $theme-purpleamber-primary;
+                        background-color: $theme-purpleamber-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-purpleamber-primary;
+                }
+                &:hover a{
+                    background-color: $theme-purpleamber-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-purpleamber-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-purpleamber {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-purpleamber-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-purpleamber {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-purpleamber-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-purpleamber-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-purpleamber-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-purpleamber-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-purpleamber-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-purpleamber-primary;
+                border-color: $theme-purpleamber-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-purpleamber{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-purpleamber-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-purpleamber-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-purpleamber-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-purpleamber-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-purpleamber{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-purpleamber-primary;
+                        background-color: $theme-purpleamber-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-purpleamber-primary, 10%);
+                        background-color: darken($theme-purpleamber-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-purpleamber-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-purpleamber-primary;
+                        }
+                       &:before{
+                            background-color: $theme-purpleamber-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-purpleamber-primary;
+                        }
+                       &:before{
+                            background-color: $theme-purpleamber-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-purpleamber-primary;
+                                color: $theme-purpleamber-primary;
+                                &:after{
+                                    border-top-color: $theme-purpleamber-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-purpleamber-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-purpleamber{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-purpleamber-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-purpleamber{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-purpleamber-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-purpleamber{
+    #primary {
+        .slider-selection{
+            background-color: $theme-purpleamber-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-purpleamber-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-purpleamber-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-purpleamber-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-purpleamber-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-purpleamber{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-purpleamber-primary;
+	                    border-color: $theme-purpleamber-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-purpleamber-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-purpleamber-primary;
+        }
+        a{
+            color: $theme-purpleamber-primary; 
+            @include hover-focus-state{
+                color: $theme-purpleamber-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-purpleamber-primary;    
+            }
+        }
+    }
+}

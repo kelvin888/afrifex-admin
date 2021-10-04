@@ -1,0 +1,2839 @@
+/**************************************
+Theme cyangreen Color
+**************************************/
+.bg-gradient-cyangreen 
+{
+	background-image: $theme-cyangreen-grd;
+}
+.theme-cyangreen{ 
+    .bg-gradient-cyangreen{@extend .bg-gradient-cyangreen}
+    .art-bg{@extend .bg-gradient-cyangreen}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-cyangreen
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-cyangreen}
+    }
+}
+
+.theme-cyangreen.onlyheader .art-bg{
+	background-image: none;
+}
+
+.bg-gradient-cyangreen-dark
+{
+	background-image: $theme-cyangreen-grd-dark;
+}
+
+.dark-skin{
+&.theme-cyangreen{ 
+    .bg-gradient-cyangreen{@extend .bg-gradient-cyangreen-dark}
+    .art-bg{@extend .bg-gradient-cyangreen-dark}
+    &.fixed {        
+        .main-header {
+            @extend .bg-gradient-cyangreen-dark
+        }
+    }
+    &.onlyheader{
+        .main-header{@extend .bg-gradient-cyangreen-dark}
+    }
+}
+}
+
+// Small devices
+@include screen-sm-max {
+    .theme-cyangreen{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-cyangreen-grd;
+                &.navbar{
+                    background: none;
+                }
+            }
+        }        
+    }
+        
+    .dark-skin{
+    &.theme-cyangreen{ 
+        &.fixed {        
+            .main-header {
+                background-image: $theme-cyangreen-grd-dark;
+            }
+        }
+    }
+    }
+}
+
+
+.theme-cyangreen{
+    a{  
+        
+        @include hover-state{
+            color: $theme-cyangreen-primary;
+        }         
+    }
+}
+
+
+// Sidebar Theme
+.theme-cyangreen{
+    .sidebar-menu{
+        >li{
+            @include hover-active-state{
+                >a{
+                   background-image: $theme-cyangreen-grd;
+                    >i{
+                        color: $white;
+                    }
+                    >span{
+                        color: $white;
+                    }
+                }
+            }
+        }
+        .treeview-menu{
+            >li{
+                &.active{
+                    >a{
+                       color: $theme-cyangreen-primary; 
+                    }
+                    >a:hover{
+                       color: $theme-cyangreen-primary;  
+                    }
+                }            
+                >a:hover{
+                   color: $theme-cyangreen-primary;  
+                }
+            }
+        }
+    }
+     &.sidebar-mini{
+        &.sidebar-collapse{
+            .sidebar-menu{
+                >li{
+                    >a{
+                        >span{
+                            background-image: $theme-cyangreen-grd;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+    /*---Primary Button---*/
+.theme-cyangreen {
+    .btn-link {
+        color: $theme-cyangreen-primary;
+    }
+    .btn-primary {
+        background-color: $theme-cyangreen-primary;
+        border-color: $theme-cyangreen-primary;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cyangreen-primary, 10%) !important;
+            border-color: darken($theme-cyangreen-primary, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cyangreen-primary, 20%);
+            border-color: $theme-cyangreen-primary;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cyangreen-primary, 20%);
+            border-color: $theme-cyangreen-primary;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-primary, 10%) !important;
+            border-color: darken($theme-cyangreen-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-primary{
+        color: $theme-cyangreen-primary;
+        background-color: transparent;
+        border-color: $theme-cyangreen-primary;        
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-primary, 10%) !important;
+            border-color: darken($theme-cyangreen-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-primary{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-primary, 10%) !important;
+            border-color: darken($theme-cyangreen-primary, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-primary{
+        color: $theme-cyangreen-primary;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-primary, 10%) !important;
+            border-color: darken($theme-cyangreen-primary, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---info Button---*/
+.theme-cyangreen {
+    .btn-info {
+        background-color: $theme-cyangreen-info;
+        border-color: $theme-cyangreen-info;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cyangreen-info, 10%) !important;
+            border-color: darken($theme-cyangreen-info, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cyangreen-info, 20%);
+            border-color: $theme-cyangreen-info;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cyangreen-info, 20%);
+            border-color: $theme-cyangreen-info;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-info, 10%) !important;
+            border-color: darken($theme-cyangreen-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-info{
+        color: $theme-cyangreen-info;
+        background-color: transparent;
+        border-color: $theme-cyangreen-info;        
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-info, 10%) !important;
+            border-color: darken($theme-cyangreen-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-info{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-info, 10%) !important;
+            border-color: darken($theme-cyangreen-info, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-info{
+        color: $theme-cyangreen-info;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-info, 10%) !important;
+            border-color: darken($theme-cyangreen-info, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Success Button---*/
+.theme-cyangreen {
+    .btn-success {
+        background-color: $theme-cyangreen-success;
+        border-color: $theme-cyangreen-success;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cyangreen-success, 10%) !important;
+            border-color: darken($theme-cyangreen-success, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cyangreen-success, 20%);
+            border-color: $theme-cyangreen-success;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cyangreen-success, 20%);
+            border-color: $theme-cyangreen-success;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-success, 10%) !important;
+            border-color: darken($theme-cyangreen-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-success{
+        color: $theme-cyangreen-success;
+        background-color: transparent;
+        border-color: $theme-cyangreen-success;        
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-success, 10%) !important;
+            border-color: darken($theme-cyangreen-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-success{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-success, 10%) !important;
+            border-color: darken($theme-cyangreen-success, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-success{
+        color: $theme-cyangreen-success;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-success, 10%) !important;
+            border-color: darken($theme-cyangreen-success, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+
+/*---Danger Button---*/
+.theme-cyangreen {
+    .btn-danger {
+        background-color: $theme-cyangreen-danger;
+        border-color: $theme-cyangreen-danger;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cyangreen-danger, 10%) !important;
+            border-color: darken($theme-cyangreen-danger, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cyangreen-danger, 20%);
+            border-color: $theme-cyangreen-danger;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cyangreen-danger, 20%);
+            border-color: $theme-cyangreen-danger;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-danger, 10%) !important;
+            border-color: darken($theme-cyangreen-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-danger{
+        color: $theme-cyangreen-danger;
+        background-color: transparent;
+        border-color: $theme-cyangreen-danger;        
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-danger, 10%) !important;
+            border-color: darken($theme-cyangreen-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-danger{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-danger, 10%) !important;
+            border-color: darken($theme-cyangreen-danger, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-danger{
+        color: $theme-cyangreen-danger;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-danger, 10%) !important;
+            border-color: darken($theme-cyangreen-danger, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+/*---Warning Button---*/
+.theme-cyangreen {
+    .btn-warning {
+        background-color: $theme-cyangreen-warning;
+        border-color: $theme-cyangreen-warning;
+        color: $white;
+        @include hover-full-state{
+            background-color: darken($theme-cyangreen-warning, 10%) !important;
+            border-color: darken($theme-cyangreen-warning, 10%) !important;
+            color: $white;
+        } 
+        &:disabled {
+            background-color: lighten($theme-cyangreen-warning, 20%);
+            border-color: $theme-cyangreen-warning;
+            opacity: 0.5;
+        }
+        &.disabled {
+            background-color: lighten($theme-cyangreen-warning, 20%);
+            border-color: $theme-cyangreen-warning;
+            opacity: 0.5;
+        }
+    }
+    .show > {
+        .btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-warning, 10%) !important;
+            border-color: darken($theme-cyangreen-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        
+    }
+    .btn-outline{
+    &.btn-warning{
+        color: $theme-cyangreen-warning;
+        background-color: transparent;
+        border-color: $theme-cyangreen-warning;        
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-warning, 10%) !important;
+            border-color: darken($theme-cyangreen-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+    .show > {
+        .btn-outline{
+        &.btn-warning{
+        &.dropdown-toggle{
+            background-color: darken($theme-cyangreen-warning, 10%) !important;
+            border-color: darken($theme-cyangreen-warning, 10%) !important;
+            color: $white;
+        }    
+        }
+        }
+    }
+    .btn-flat{
+    &.btn-warning{
+        color: $theme-cyangreen-warning;
+        background-color: transparent;
+        border-color: transparent;
+        @include hover-active-state{
+            background-color: darken($theme-cyangreen-warning, 10%) !important;
+            border-color: darken($theme-cyangreen-warning, 10%) !important;
+            color: $white;
+        }
+    }
+    }
+}
+
+    /*---callout---*/
+.theme-cyangreen{
+    .callout{
+    &.callout-primary {
+        border-color: $theme-cyangreen-primary;
+        background-color: $theme-cyangreen-primary !important;
+    }
+        
+    &.callout-info {
+        border-color: $theme-cyangreen-info;
+        background-color: $theme-cyangreen-info !important;
+    }
+        
+    &.callout-success {
+        border-color: $theme-cyangreen-success;
+        background-color: $theme-cyangreen-success !important;
+    }
+        
+    &.callout-danger {
+        border-color: $theme-cyangreen-danger;
+        background-color: $theme-cyangreen-danger !important;
+    }
+        
+    &.callout-warning {
+        border-color: $theme-cyangreen-warning;
+        background-color: $theme-cyangreen-warning !important;
+    }
+    }
+}
+
+    /*---alert---*/
+.theme-cyangreen{
+    .alert-primary{
+        border-color: $theme-cyangreen-primary;
+        background-color: $theme-cyangreen-primary !important;
+        color: $white;
+    }
+    .alert-info{
+        border-color: $theme-cyangreen-info;
+        background-color: $theme-cyangreen-info !important;
+        color: $white;
+    }
+    .alert-success{
+        border-color: $theme-cyangreen-success;
+        background-color: $theme-cyangreen-success !important;
+        color: $white;
+    }
+    .alert-danger{
+        border-color: $theme-cyangreen-danger;
+        background-color: $theme-cyangreen-danger !important;
+        color: $white;
+    }
+    .alert-error{
+        border-color: $theme-cyangreen-danger;
+        background-color: $theme-cyangreen-danger !important;
+        color: $white;
+    }
+    .alert-warning{
+        border-color: $theme-cyangreen-warning;
+        background-color: $theme-cyangreen-warning !important;
+        color: $white;
+    }
+}
+
+    /*---direct-chat---*/
+.theme-cyangreen {
+    .direct-chat-primary {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cyangreen-primary;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cyangreen-primary;
+                }
+            }
+        }
+    }
+    .direct-chat-info {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cyangreen-info;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cyangreen-info;
+                }
+            }
+        }
+    }
+    .direct-chat-success {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cyangreen-success;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cyangreen-success;
+                }
+            }
+        }
+    }
+    .direct-chat-danger {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cyangreen-danger;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cyangreen-danger;
+                }
+            }
+        }
+    }
+    .direct-chat-warning {
+        .right > {
+            .direct-chat-text {
+                p {
+                    background-color: $theme-cyangreen-warning;
+                    color: $white;
+                }
+                @include before-after-state{
+                    border-left-color: $theme-cyangreen-warning;
+                }
+            }
+        }
+    }
+    .right{
+        .direct-chat-text {
+            p {
+                background-color: $theme-cyangreen-primary;
+            }
+        }
+    }
+}
+
+    /*---modal---*/
+.theme-cyangreen{
+    .modal-primary {
+        .modal-footer{
+            border-color: $theme-cyangreen-primary;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cyangreen-primary !important;
+        }
+    }
+    .modal-info {
+        .modal-footer{
+            border-color: $theme-cyangreen-info;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cyangreen-info !important;
+        }
+    }
+    .modal-success {
+        .modal-footer{
+            border-color: $theme-cyangreen-success;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cyangreen-success !important;
+        }
+    }
+    .modal-danger {
+        .modal-footer{
+            border-color: $theme-cyangreen-danger;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cyangreen-danger !important;
+        }
+    }
+    .modal-warning {
+        .modal-footer{
+            border-color: $theme-cyangreen-warning;
+        }
+        .modal-header{
+            @extend .modal-footer 
+        }
+        .modal-body{
+            background-color: $theme-cyangreen-warning !important;
+        }
+    }
+}
+
+    /*---border---*/
+.theme-cyangreen {
+    .border-primary {
+        border-color: $theme-cyangreen-primary !important;
+    }
+    .border-info {
+        border-color: $theme-cyangreen-info !important;
+    }
+    .border-success {
+        border-color: $theme-cyangreen-success !important;
+    }
+    .border-danger {
+        border-color: $theme-cyangreen-danger !important;
+    }
+    .border-warning {
+        border-color: $theme-cyangreen-warning !important;
+    }
+}
+
+    /*---Background---*/
+.theme-cyangreen {
+    .bg-primary {
+      background-color: $theme-cyangreen-primary !important;
+      color: $white;
+    }
+    .bg-info {
+      background-color: $theme-cyangreen-info !important;
+      color: $white;
+    }
+    .bg-success {
+      background-color: $theme-cyangreen-success !important;
+      color: $white;
+    }
+    .bg-danger {
+      background-color: $theme-cyangreen-danger !important;
+      color: $white;
+    }
+    .bg-warning {
+      background-color: $theme-cyangreen-warning !important;
+      color: $white;
+    }
+}
+
+    /*---text---*/
+.theme-cyangreen {
+    .text-primary {
+      color: $theme-cyangreen-primary !important;
+    }
+    a{
+    &.text-primary{
+        @include hover-focus-state{
+            color: $theme-cyangreen-primary !important;    
+        }
+    }
+    }
+    .hover-primary{
+        @include hover-focus-state{
+            color: $theme-cyangreen-primary !important;    
+        }
+    }
+    
+    .text-info {
+      color: $theme-cyangreen-info !important;
+    }
+    a{
+    &.text-info{
+        @include hover-focus-state{
+            color: $theme-cyangreen-info !important;    
+        }
+    }
+    }
+    .hover-info{
+        @include hover-focus-state{
+            color: $theme-cyangreen-info !important;    
+        }
+    }
+    
+    .text-success {
+      color: $theme-cyangreen-success !important;
+    }
+    a{
+    &.text-success{
+        @include hover-focus-state{
+            color: $theme-cyangreen-success !important;    
+        }
+    }
+    }
+    .hover-success{
+        @include hover-focus-state{
+            color: $theme-cyangreen-success !important;    
+        }
+    }
+    
+    .text-danger {
+      color: $theme-cyangreen-danger !important;
+    }
+    a{
+    &.text-danger{
+        @include hover-focus-state{
+            color: $theme-cyangreen-danger !important;    
+        }
+    }
+    }
+    .hover-danger{
+        @include hover-focus-state{
+            color: $theme-cyangreen-danger !important;    
+        }
+    }
+    
+    .text-warning {
+      color: $theme-cyangreen-warning !important;
+    }
+    a{
+    &.text-warning{
+        @include hover-focus-state{
+            color: $theme-cyangreen-warning !important;    
+        }
+    }
+    }
+    .hover-warning{
+        @include hover-focus-state{
+            color: $theme-cyangreen-warning !important;    
+        }
+    }
+}
+
+    /*---active background---*/
+.theme-cyangreen {
+    .active{
+    &.active-primary {
+        background-color: darken($theme-cyangreen-primary, 10%) !important;
+    }
+    &.active-info {
+        background-color: darken($theme-cyangreen-info, 10%) !important;
+    }
+    &.active-success {
+        background-color: darken($theme-cyangreen-success, 10%) !important;
+    }
+    &.active-danger {
+        background-color: darken($theme-cyangreen-danger, 10%) !important;
+    }
+    &.active-warning {
+        background-color: darken($theme-cyangreen-warning, 10%) !important;
+    }
+    }
+}
+
+    /*---label background---*/
+.theme-cyangreen {
+    .label-primary{
+        background-color: $theme-cyangreen-primary !important;
+    }
+    .label-info{
+        background-color: $theme-cyangreen-info !important;
+    }
+    .label-success{
+        background-color: $theme-cyangreen-success !important;
+    }
+    .label-danger{
+        background-color: $theme-cyangreen-danger !important;
+    }
+    .label-warning{
+        background-color: $theme-cyangreen-warning !important;
+    }
+}
+
+    /*---ribbon---*/
+
+$ribbon-bod-w: 3px;
+$ribbon-bod-s: solid;
+
+.theme-cyangreen {
+    .ribbon-box {
+        .ribbon-primary {
+            background-color: $theme-cyangreen-primary;
+            
+            &:before  {
+                border-color: $theme-cyangreen-primary transparent transparent;
+            }
+        }
+        .ribbon-two-primary{
+            span{
+                background-color: $theme-cyangreen-primary; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-primary, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-primary, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-primary, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-info {
+            background-color: $theme-cyangreen-info;
+            
+            &:before  {
+                border-color: $theme-cyangreen-info transparent transparent;
+            }
+        }
+        .ribbon-two-info{
+            span{
+                background-color: $theme-cyangreen-info; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-info, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-info, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-info, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-success {
+            background-color: $theme-cyangreen-success;
+            
+            &:before  {
+                border-color: $theme-cyangreen-success transparent transparent;
+            }
+        }
+        .ribbon-two-success{
+            span{
+                background-color: $theme-cyangreen-success; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-success, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-success, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-success, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-danger {
+            background-color: $theme-cyangreen-danger;
+            
+            &:before  {
+                border-color: $theme-cyangreen-danger transparent transparent;
+            }
+        }
+        .ribbon-two-danger{
+            span{
+                background-color: $theme-cyangreen-danger; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-danger, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-danger, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-danger, 10%);    
+            }
+            }
+        }
+        
+        .ribbon-warning {
+            background-color: $theme-cyangreen-warning;
+            
+            &:before  {
+                border-color: $theme-cyangreen-warning transparent transparent;
+            }
+        }
+        .ribbon-two-warning{
+            span{
+                background-color: $theme-cyangreen-warning; 
+            &:before{
+                border-left: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-warning, 10%);    
+            }
+            &:after{
+                border-right: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-warning, 10%);  
+                border-top: $ribbon-bod-w $ribbon-bod-s darken($theme-cyangreen-warning, 10%);    
+            }
+            }
+        }
+    }
+}
+
+    /*---Box---*/
+$box-bod-w: 1px;
+$box-bod-s: solid;
+
+.theme-cyangreen{ 
+    .box-primary {
+        background-color: $theme-cyangreen-primary !important;
+    &.box-bordered{
+        border-color: $theme-cyangreen-primary;
+    }
+    }
+    .box-outline-primary {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cyangreen-primary;
+    }
+    .box{
+    &.box-solid{
+    &.box-primary > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cyangreen-primary;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-info {
+        background-color: $theme-cyangreen-info !important;
+    &.box-bordered{
+        border-color: $theme-cyangreen-info;
+    }
+    }
+    .box-outline-info {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cyangreen-info;
+    }
+    .box{
+    &.box-solid{
+    &.box-info > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cyangreen-info;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-success {
+        background-color: $theme-cyangreen-success !important;
+    &.box-bordered{
+        border-color: $theme-cyangreen-success;
+    }
+    }
+    .box-outline-success {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cyangreen-success;
+    }
+    .box{
+    &.box-solid{
+    &.box-success > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cyangreen-success;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-danger {
+        background-color: $theme-cyangreen-danger !important;
+    &.box-bordered{
+        border-color: $theme-cyangreen-danger;
+    }
+    }
+    .box-outline-danger {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cyangreen-danger;
+    }
+    .box{
+    &.box-solid{
+    &.box-danger > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cyangreen-danger;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+     
+    .box-warning {
+        background-color: $theme-cyangreen-warning !important;
+    &.box-bordered{
+        border-color: $theme-cyangreen-warning;
+    }
+    }
+    .box-outline-warning {
+        background-color: $white;
+        border: $box-bod-w $box-bod-s $theme-cyangreen-warning;
+    }
+    .box{
+    &.box-solid{
+    &.box-warning > {
+        .box-header {
+            color: $white;
+            background-color: $theme-cyangreen-warning;
+            .btn{
+                color: $white;    
+            }
+            > a{
+                color: $white;                  
+            }
+        }
+    }
+    }
+    }
+    
+    
+    .box-profile {
+        .social-states {
+            a{
+            &:hover {
+                color: darken($theme-cyangreen-primary, 10%);
+            }
+            }
+        }
+    }
+    .box-controls {
+        li > {
+            a{
+            &:hover {
+                color: darken($theme-cyangreen-primary, 10%);
+            }
+            }
+        }
+        .dropdown {
+        &.show > {
+            a {
+                color: darken($theme-cyangreen-primary, 10%);
+            }
+        }
+        }
+    }
+    .box-fullscreen {
+        .box-btn-fullscreen {
+            color: darken($theme-cyangreen-primary, 10%);
+        }
+    }
+}
+
+    /*---progress bar---*/
+.theme-cyangreen {
+    .progress-bar-primary {
+        background-color: $theme-cyangreen-primary;
+    }
+    .progress-bar-info {
+        background-color: $theme-cyangreen-info;
+    }
+    .progress-bar-success {
+        background-color: $theme-cyangreen-success;
+    }
+    .progress-bar-danger {
+        background-color: $theme-cyangreen-danger;
+    }
+    .progress-bar-warning {
+        background-color: $theme-cyangreen-warning;
+    }
+}
+    /*---panel---*/
+.theme-cyangreen {
+    .panel-primary {
+        border-color: $theme-cyangreen-primary;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cyangreen-primary;
+            border-color: $theme-cyangreen-primary;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cyangreen-primary;
+                }
+            }
+            .badge-pill {
+                color: $theme-cyangreen-primary;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cyangreen-primary;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-primary {
+        .panel-heading {
+          color: $theme-cyangreen-primary;
+          border-top-color: $theme-cyangreen-primary;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cyangreen-primary;            
+        }
+    }
+    }    
+    
+    .panel-info {
+        border-color: $theme-cyangreen-info;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cyangreen-info;
+            border-color: $theme-cyangreen-info;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cyangreen-info;
+                }
+            }
+            .badge-pill {
+                color: $theme-cyangreen-info;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cyangreen-info;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-info {
+        .panel-heading {
+          color: $theme-cyangreen-info;
+          border-top-color: $theme-cyangreen-info;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cyangreen-info;            
+        }
+    }
+    }    
+    
+    .panel-success {
+        border-color: $theme-cyangreen-success;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cyangreen-success;
+            border-color: $theme-cyangreen-success;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cyangreen-success;
+                }
+            }
+            .badge-pill {
+                color: $theme-cyangreen-success;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cyangreen-success;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-success {
+        .panel-heading {
+          color: $theme-cyangreen-success;
+          border-top-color: $theme-cyangreen-success;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cyangreen-success;            
+        }
+    }
+    }    
+    
+    .panel-danger {
+        border-color: $theme-cyangreen-danger;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cyangreen-danger;
+            border-color: $theme-cyangreen-danger;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cyangreen-danger;
+                }
+            }
+            .badge-pill {
+                color: $theme-cyangreen-danger;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cyangreen-danger;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-danger {
+        .panel-heading {
+          color: $theme-cyangreen-danger;
+          border-top-color: $theme-cyangreen-danger;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cyangreen-danger;            
+        }
+    }
+    }    
+    
+    .panel-warning {
+        border-color: $theme-cyangreen-warning;
+        > .panel-heading {
+            color: $white;
+            background-color: $theme-cyangreen-warning;
+            border-color: $theme-cyangreen-warning;
+            + .panel-collapse {
+                > .panel-body {
+                  border-top-color: $theme-cyangreen-warning;
+                }
+            }
+            .badge-pill {
+                color: $theme-cyangreen-warning;
+                background-color: $white;
+            }
+        }
+        .panel-title {
+            color: $white;
+        }
+        .panel-action {
+            @extend .panel-title
+        }
+        .panel-footer {
+            + .panel-collapse {
+                > .panel-body {
+                  border-bottom-color: $theme-cyangreen-warning;
+                }
+            }
+        }
+    }
+    .panel-line{
+    &.panel-warning {
+        .panel-heading {
+          color: $theme-cyangreen-warning;
+          border-top-color: $theme-cyangreen-warning;
+          background: transparent;
+        }
+        .panel-title {
+            color: $theme-cyangreen-warning;            
+        }
+    }
+    }
+    
+}
+
+    /*---switch---*/
+.theme-cyangreen {
+    .switch{    
+    input {
+    &:checked {
+        ~ .switch-indicator{
+          &::after {
+            background-color: $theme-cyangreen-primary;
+          }
+        }
+    }
+    }
+    &.switch-primary {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cyangreen-primary;
+              }
+            }
+        }
+        }
+    }
+    &.switch-info {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cyangreen-info;
+              }
+            }
+        }
+        }
+    }
+    &.switch-success {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cyangreen-success;
+              }
+            }
+        }
+        }
+    }
+    &.switch-danger {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cyangreen-danger;
+              }
+            }
+        }
+        }
+    }
+    &.switch-warning {
+        input {
+        &:checked {
+            ~ .switch-indicator{
+              &::after {
+                background-color: $theme-cyangreen-warning;
+              }
+            }
+        }
+        }
+    }
+    }
+}
+
+    /*---badge---*/
+.theme-cyangreen {
+    .badge-primary {
+        background-color: $theme-cyangreen-primary;
+        color: $white;
+    }
+    .badge-primary[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cyangreen-primary, 10%);
+        }
+    }
+    .badge-info {
+        background-color: $theme-cyangreen-info;
+        color: $white;
+    }
+    .badge-info[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cyangreen-info, 10%);
+        }
+    }
+    .badge-success {
+        background-color: $theme-cyangreen-success;
+        color: $white;
+    }
+    .badge-success[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cyangreen-success, 10%);
+        }
+    }
+    .badge-danger {
+        background-color: $theme-cyangreen-danger;
+        color: $white;
+    }
+    .badge-danger[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cyangreen-danger, 10%);
+        }
+    }
+    .badge-warning {
+        background-color: $theme-cyangreen-warning;
+        color: $white;
+    }
+    .badge-warning[href]{
+        @include hover-focus-state{
+            background-color: darken($theme-cyangreen-warning, 10%);
+        }
+    }
+}
+
+    /*---rating---*/
+.theme-cyangreen {
+    .rating-primary {
+        .active {
+            color: $theme-cyangreen-primary;
+        }
+        :checked ~ label {
+            color: $theme-cyangreen-primary;
+        }
+        label{
+            &:hover {
+                color: $theme-cyangreen-primary;
+                ~ label {
+                    color: $theme-cyangreen-primary;
+                }
+            }
+        }
+    }
+    .rating-info {
+        .active {
+            color: $theme-cyangreen-info;
+        }
+        :checked ~ label {
+            color: $theme-cyangreen-info;
+        }
+        label{
+            &:hover {
+                color: $theme-cyangreen-info;
+                ~ label {
+                    color: $theme-cyangreen-info;
+                }
+            }
+        }
+    }
+    .rating-success {
+        .active {
+            color: $theme-cyangreen-success;
+        }
+        :checked ~ label {
+            color: $theme-cyangreen-success;
+        }
+        label{
+            &:hover {
+                color: $theme-cyangreen-success;
+                ~ label {
+                    color: $theme-cyangreen-success;
+                }
+            }
+        }
+    }
+    .rating-danger {
+        .active {
+            color: $theme-cyangreen-danger;
+        }
+        :checked ~ label {
+            color: $theme-cyangreen-danger;
+        }
+        label{
+            &:hover {
+                color: $theme-cyangreen-danger;
+                ~ label {
+                    color: $theme-cyangreen-danger;
+                }
+            }
+        }
+    }
+    .rating-warning {
+        .active {
+            color: $theme-cyangreen-warning;
+        }
+        :checked ~ label {
+            color: $theme-cyangreen-warning;
+        }
+        label{
+            &:hover {
+                color: $theme-cyangreen-warning;
+                ~ label {
+                    color: $theme-cyangreen-warning;
+                }
+            }
+        }
+    }
+}
+
+    /*---toggler---*/
+.theme-cyangreen {
+    .toggler-primary {
+        input{
+        &:checked + i {
+            color: $theme-cyangreen-primary;
+        }
+        }
+    }
+    .toggler-info {
+        input{
+        &:checked + i {
+            color: $theme-cyangreen-info;
+        }
+        }
+    }
+    .toggler-success {
+        input{
+        &:checked + i {
+            color: $theme-cyangreen-success;
+        }
+        }
+    }
+    .toggler-danger {
+        input{
+        &:checked + i {
+            color: $theme-cyangreen-danger;
+        }
+        }
+    }
+    .toggler-warning {
+        input{
+        &:checked + i {
+            color: $theme-cyangreen-warning;
+        }
+        }
+    }
+}
+
+    /*---nav tabs---*/
+.theme-cyangreen {
+    .nav-tabs{
+    &.nav-tabs-primary {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cyangreen-primary, 10%);
+                background-color: transparent;
+                color: darken($theme-cyangreen-primary, 10%);
+            }
+        }
+    }
+    &.nav-tabs-info {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cyangreen-info, 10%);
+                background-color: transparent;
+                color: darken($theme-cyangreen-info, 10%);
+            }
+        }
+    }
+    &.nav-tabs-success {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cyangreen-success, 10%);
+                background-color: transparent;
+                color: darken($theme-cyangreen-success, 10%);
+            }
+        }
+    }
+    &.nav-tabs-danger {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cyangreen-danger, 10%);
+                background-color: transparent;
+                color: darken($theme-cyangreen-danger, 10%);
+            }
+        }
+    }
+    &.nav-tabs-warning {
+        .nav-link{
+            @include hover-full-state{
+                border-color: darken($theme-cyangreen-warning, 10%);
+                background-color: transparent;
+                color: darken($theme-cyangreen-warning, 10%);
+            }
+        }
+    }
+    }
+    .nav-tabs-custom{
+    &.tab-primary{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cyangreen-primary, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-info{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cyangreen-info, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-success{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cyangreen-success, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-danger{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cyangreen-danger, 10%);
+                }
+                }
+            }
+        }
+    }
+    &.tab-warning{
+        >.nav-tabs{
+            >li {
+                a{
+                &.active {
+                    border-top-color: darken($theme-cyangreen-warning, 10%);
+                }
+                }
+            }
+        }
+    }
+    }
+    .nav-tabs {
+        .nav-link{
+        &.active{
+            border-bottom-color: $theme-cyangreen-primary;
+            background-color: $theme-cyangreen-primary;
+            color: $white;
+            @include hover-focus-state{
+                border-bottom-color: $theme-cyangreen-primary;
+                background-color: $theme-cyangreen-primary; 
+                color: $white;
+            }
+        }
+        }
+        .nav-item{
+        &.open{
+            .nav-link{
+                border-bottom-color: $theme-cyangreen-primary;
+                background-color: $theme-cyangreen-primary;
+                @include hover-focus-state{
+                    border-bottom-color: $theme-cyangreen-primary;
+                    background-color: $theme-cyangreen-primary;    
+                }
+            }
+        }
+        }
+    }
+}
+
+    /*---todo---*/
+.theme-cyangreen {
+    .todo-list {
+        .primary {
+            border-left-color: $theme-cyangreen-primary;
+        }
+        .info {
+            border-left-color: $theme-cyangreen-primary;
+        }
+        .success {
+            border-left-color: $theme-cyangreen-success;
+        }
+        .danger {
+            border-left-color: $theme-cyangreen-danger;
+        }
+        .warning {
+            border-left-color: $theme-cyangreen-warning;
+        }
+    }
+}
+
+    /*---timeline---*/
+.theme-cyangreen {
+    .timeline {
+        .timeline-item {
+            > .timeline-event{
+                &.timeline-event-primary {
+                  background-color: $theme-cyangreen-primary;
+                  border: 1px solid  $theme-cyangreen-primary;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cyangreen-primary;
+                  border-right-color: $theme-cyangreen-primary;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-info {
+                  background-color: $theme-cyangreen-info;
+                  border: 1px solid  $theme-cyangreen-info;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cyangreen-info;
+                  border-right-color: $theme-cyangreen-info;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-success {
+                  background-color: $theme-cyangreen-success;
+                  border: 1px solid  $theme-cyangreen-success;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cyangreen-success;
+                  border-right-color: $theme-cyangreen-success;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-danger {
+                  background-color: $theme-cyangreen-danger;
+                  border: 1px solid  $theme-cyangreen-danger;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cyangreen-danger;
+                  border-right-color: $theme-cyangreen-danger;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+                &.timeline-event-warning {
+                  background-color: $theme-cyangreen-warning;
+                  border: 1px solid  $theme-cyangreen-warning;
+                  color: $white;
+                @include before-after-state {
+                  border-left-color: $theme-cyangreen-warning;
+                  border-right-color: $theme-cyangreen-warning;
+                }
+                * {
+                  color: inherit;
+                }
+                }
+            }
+            > .timeline-point{
+                &.timeline-point-primary {
+                  color: $theme-cyangreen-primary;
+                  background-color: $white;
+                }
+                &.timeline-point-info {
+                  color: $theme-cyangreen-info;
+                  background-color: $white;
+                }
+                &.timeline-point-success {
+                  color: $theme-cyangreen-success;
+                  background-color: $white;
+                }
+                &.timeline-point-danger {
+                  color: $theme-cyangreen-danger;
+                  background-color: $white;
+                }
+                &.timeline-point-warning {
+                  color: $theme-cyangreen-warning;
+                  background-color: $white;
+                }
+            }
+        }
+        .timeline-label {
+            .label-primary {
+                background-color: $theme-cyangreen-primary;
+            }
+            .label-info {
+                background-color: $theme-cyangreen-info;
+            }
+            .label-success {
+                background-color: $theme-cyangreen-success;
+            }
+            .label-danger {
+                background-color: $theme-cyangreen-danger;
+            }
+            .label-warning {
+                background-color: $theme-cyangreen-warning;
+            }
+        }
+    }
+    
+    .timeline__year{
+        background-color: $theme-cyangreen-primary;
+    }
+    .timeline5:before{
+        @extend .timeline__year
+    }
+    .timeline__box:before{
+        @extend .timeline__year
+    }
+    .timeline__date{
+        @extend .timeline__year
+    }
+    .timeline__post{
+        border-left: 3px solid $theme-cyangreen-primary;
+    }
+}
+
+    /*---daterangepicker---*/
+.theme-cyangreen{
+    .daterangepicker{
+        td{
+            &.active{
+                background-color: $theme-cyangreen-primary; 
+                &:hover{
+                   background-color: $theme-cyangreen-primary; 
+                }
+            }
+        }
+        .input-mini.active {
+            border: 1px solid $theme-cyangreen-primary;
+        }
+    }
+    .ranges {
+        li{
+            @include hover-active-state{
+                border: 1px solid $theme-cyangreen-primary;
+                background-color: $theme-cyangreen-primary; 
+            }
+        }
+    }
+}
+
+    /*---control-sidebar---*/
+.theme-cyangreen{
+    .control-sidebar{
+        .nav-tabs.control-sidebar-tabs{
+            >li{
+                >a{
+                    @include hover-state{
+                        border-color: $theme-cyangreen-primary;
+                        color: $theme-cyangreen-primary;
+                    }
+                    &.active{                        
+                        border-color: $theme-cyangreen-primary;
+                        color: $theme-cyangreen-primary;
+                        @include hover-state{
+                            border-color: $theme-cyangreen-primary;
+                            color: $theme-cyangreen-primary;
+                        }
+                    }
+                }
+            }
+        }
+        .rpanel-title {
+            .btn:hover {
+                color: $theme-cyangreen-primary;
+            }
+        }
+    }
+}
+
+    /*---nav---*/
+.theme-cyangreen{
+    .nav{
+        >li{
+            >a{
+                @include hover-state{
+                   color: $theme-cyangreen-primary; 
+                } 
+            }
+        }
+    }
+    .nav-pills{
+        >li{
+            >a{ 
+                &.active{
+                       border-top-color: $theme-cyangreen-primary;
+	                   background-color: $theme-cyangreen-primary !important;
+                       color: $white;
+                    @include hover-focus-state{
+                       border-top-color: $theme-cyangreen-primary;
+	                   background-color: $theme-cyangreen-primary !important;
+                       color: $white;
+                    }     
+                }
+            }
+        }
+    }
+    .mailbox-nav{
+        .nav-pills{
+            >li{
+                >a{ 
+                    @include hover-focus-state{
+                       border-color: $theme-cyangreen-primary;
+                    }     
+                    &.active{
+                           border-color: $theme-cyangreen-primary;
+                        @include hover-focus-state{
+                           border-color: $theme-cyangreen-primary;
+                        }     
+                    }
+                }
+            }
+        }
+    }  
+    .nav-tabs-custom{
+        >.nav-tabs{
+            >li{
+                a{      
+                    &.active{
+                        border-top-color: $theme-cyangreen-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .profile-tab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-cyangreen-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab{
+        li{
+            a{
+                &.nav-link{      
+                    &.active{
+                        border-bottom: 2px solid $theme-cyangreen-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---form-element---*/
+.theme-cyangreen {
+    .form-element {
+        .input-group {
+            .input-group-addon{
+                background-image: $theme-cyangreen-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }
+        }
+        .form-control {            
+            &:focus {
+                background-image: $theme-cyangreen-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+            }            
+            background-image: $theme-cyangreen-grd, linear-gradient(lighten($dark, 65%), lighten($dark, 65%),) 
+        }
+    }
+    .form-control {            
+        &:focus {
+            border-color: $theme-cyangreen-primary;
+        }            
+    }
+    [type=checkbox]:checked {
+        &.chk-col-primary {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cyangreen-primary;
+                    border-bottom: 2px solid $theme-cyangreen-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cyangreen-info;
+                    border-bottom: 2px solid $theme-cyangreen-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cyangreen-success;
+                    border-bottom: 2px solid $theme-cyangreen-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cyangreen-danger;
+                    border-bottom: 2px solid $theme-cyangreen-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cyangreen-warning;
+                    border-bottom: 2px solid $theme-cyangreen-warning;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in:checked {
+        &.chk-col-primary {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cyangreen-primary;
+                    background-color: $theme-cyangreen-primary;
+                }
+            }
+        }
+        &.chk-col-info {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cyangreen-info;
+                    background-color: $theme-cyangreen-info;
+                }
+            }
+        }
+        &.chk-col-success {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cyangreen-success;
+                    background-color: $theme-cyangreen-success;
+                }
+            }
+        }
+        &.chk-col-danger {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cyangreen-danger;
+                    background-color: $theme-cyangreen-danger;
+                }
+            }
+        }
+        &.chk-col-warning {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cyangreen-warning;
+                    background-color: $theme-cyangreen-warning;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-primary;
+                    border-color: $theme-cyangreen-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cyangreen-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-primary {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-primary;
+                    border: 2px solid $theme-cyangreen-primary;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-info;
+                    border-color: $theme-cyangreen-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cyangreen-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-info {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-info;
+                    border: 2px solid $theme-cyangreen-info;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-success;
+                    border-color: $theme-cyangreen-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cyangreen-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-success {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-success;
+                    border: 2px solid $theme-cyangreen-success;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-danger;
+                    border-color: $theme-cyangreen-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cyangreen-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-danger {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-danger;
+                    border: 2px solid $theme-cyangreen-danger;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-warning;
+                    border-color: $theme-cyangreen-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:before {
+                    border: 2px solid $theme-cyangreen-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    [type=radio].with-gap.radio-col-warning {
+        &:checked {
+            &+label {
+                &:after {
+                    background-color: $theme-cyangreen-warning;
+                    border: 2px solid $theme-cyangreen-warning;
+                    -webkit-animation: ripple .2s linear forwards;
+                    animation: ripple .2s linear forwards;
+                }
+            }
+        }
+    }
+    
+    [type=checkbox]{
+        &:checked {
+            &+label {
+                &:before {
+                    border-right: 2px solid $theme-cyangreen-primary;
+                    border-bottom: 2px solid $theme-cyangreen-primary;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in{
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cyangreen-primary;
+                    background-color: $theme-cyangreen-primary;
+                }
+            }
+        }
+    }
+    [type=radio]{
+        &.with-gap{
+        &:checked {
+            &+label {
+                @include before-after-state{
+                    border: 2px solid $theme-cyangreen-primary;
+                }
+                &:after {
+                    background-color: $theme-cyangreen-primary;
+                    z-index: 0;
+                }
+            }
+        }
+        }        
+        &:checked {
+            &+label {
+                &:after {
+                    border: 2px solid $theme-cyangreen-primary;
+                    background-color: $theme-cyangreen-primary;
+                    z-index: 0;
+                }
+            }
+        }
+    }
+    [type=checkbox].filled-in.tabbed{
+        &:checked:focus {
+            &+label {
+                &:after {
+                    border-color: $theme-cyangreen-primary;
+                    background-color: $theme-cyangreen-primary;
+                }
+            }
+        }
+    }
+}
+
+    /*---Calender---*/
+.theme-cyangreen{
+    .fx-element-overlay{
+        .fx-card-item {
+            .fx-card-content a:hover {
+                color: $theme-cyangreen-primary;
+            }
+            .fx-overlay-1 .fx-info > li a:hover {
+                background: $theme-cyangreen-primary;
+                border-color: $theme-cyangreen-primary;
+            }
+        }
+    }
+    .fc-event {
+        background: $theme-cyangreen-primary;
+    }
+    .calendar-event{
+        @extend .fc-event
+    }
+}
+
+    /*---Tabs---*/
+
+.theme-cyangreen {
+    .tabs-vertical{
+        li{
+            .nav-link{
+                @include hover-full-state{
+                    background-color: $theme-cyangreen-primary;
+                    color: $white;    
+                }
+            }
+        }
+    }
+    .customvtab{
+        .tabs-vertical{
+            li{
+                .nav-link{
+                    @include hover-full-state{
+                        border-right: 2px solid $theme-cyangreen-primary;
+                        color: $theme-cyangreen-primary;    
+                    }
+                }
+            }
+        }
+    }
+    .customtab2{
+        li{
+            a{
+                &.nav-link{
+                    @include hover-active-state{
+                        background-color: $theme-cyangreen-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---Notification---*/
+.theme-cyangreen {
+    .jq-icon-primary { 
+        background-color: $theme-cyangreen-primary; 
+        color: $white; 
+        border-color: $theme-cyangreen-primary; 
+    }
+    .jq-icon-info { 
+        background-color: $theme-cyangreen-info; 
+        color: $white; 
+        border-color: $theme-cyangreen-info; 
+    }
+    .jq-icon-success { 
+        background-color: $theme-cyangreen-success; 
+        color: $white; 
+        border-color: $theme-cyangreen-primary; 
+    }
+    .jq-icon-error { 
+        background-color: $theme-cyangreen-danger; 
+        color: $white; 
+        border-color: $theme-cyangreen-danger; 
+    }
+    .jq-icon-danger { 
+        background-color: $theme-cyangreen-danger; 
+        color: $white; 
+        border-color: $theme-cyangreen-danger; 
+    }
+    .jq-icon-warning { 
+        background-color: $theme-cyangreen-warning; 
+        color: $white; 
+        border-color: $theme-cyangreen-warning; 
+    }
+}
+
+    /*---avatar---*/
+.theme-cyangreen {
+    .avatar{
+        &.status-primary::after {
+            background-color: $theme-cyangreen-primary;
+        }
+        &.status-info::after {
+            background-color: $theme-cyangreen-info;
+        }
+        &.status-success::after {
+            background-color: $theme-cyangreen-success;
+        }
+        &.status-danger::after {
+            background-color: $theme-cyangreen-danger;
+        }
+        &.status-warning::after {
+            background-color: $theme-cyangreen-warning;
+        }
+        &[class*='status-']::after {
+            background-color: $theme-cyangreen-primary;
+        }
+    }
+    .avatar-add:hover {
+        background-color: darken($theme-cyangreen-primary, 10%);
+        border-color: darken($theme-cyangreen-primary, 10%);
+    }
+}
+
+    /*---media---*/
+.theme-cyangreen {
+    .media-chat{
+        &.media-chat-reverse {
+            .media-body {
+                p {
+                  background-color: $theme-cyangreen-primary; 
+                }
+            }
+        }
+    }
+    .media-right-out {
+        a:hover {
+            color: darken($theme-cyangreen-primary, 10%);
+        }
+    }
+}
+
+    /*---control---*/
+.theme-cyangreen{
+    .control{
+        input{
+        &:checked{
+            &:focus~.control_indicator{
+               background-color: $theme-cyangreen-primary;  
+            }  
+            ~.control_indicator{
+               background-color: $theme-cyangreen-primary; 
+            }
+        }
+        }  
+        &:hover input:not([disabled]):checked~.control_indicator{
+            background-color: $theme-cyangreen-primary; 
+        }
+    }
+}
+
+    /*---flex---*/
+.theme-cyangreen{
+    .flex-column{
+        >li{
+            >a{
+                &.nav-link{
+                    &.active{
+                        border-left-color: $theme-cyangreen-primary;
+                        &:hover{
+                            border-left-color: $theme-cyangreen-primary;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+    /*---pagination---*/
+.theme-cyangreen{
+    .pagination{
+        li{
+            a{
+                &.current{
+                    border: 1px solid $theme-cyangreen-primary;
+                    background-color: $theme-cyangreen-primary;
+                    &:hover{
+                        border: 1px solid $theme-cyangreen-primary;
+                        background-color: $theme-cyangreen-primary;
+                    }
+                }
+                &:hover{
+                    border: 1px solid darken($theme-cyangreen-primary, 10%);
+                    background-color: darken($theme-cyangreen-primary, 10%)!important;
+                }
+            }
+        }
+    }
+    .dataTables_wrapper{
+        .dataTables_paginate{
+            .paginate_button.current{
+                border: 1px solid $theme-cyangreen-primary;
+                background-color: $theme-cyangreen-primary;
+                    &:hover{
+                        border: 1px solid $theme-cyangreen-primary;
+                        background-color: $theme-cyangreen-primary;
+                    }                
+            } 
+        }
+    }
+    .paging_simple_numbers{
+        .pagination{
+            .paginate_button{
+                &.active a{
+                    background-color: $theme-cyangreen-primary;
+                }
+                &:hover a{
+                    background-color: $theme-cyangreen-primary;
+                }
+            }
+        }
+    }
+    .footable{
+        .pagination{
+            li{
+                a{
+                    @include hover-active-state{
+                        background-color: $theme-cyangreen-primary;    
+                    }
+                }
+            }
+        }
+    }
+}
+/*---dataTables---*/
+.theme-cyangreen {
+    .dt-buttons {
+        .dt-button {
+            background-color: $theme-cyangreen-primary;
+        }
+    }
+}
+
+/*---select2---*/
+.theme-cyangreen {
+    .select2-container--default{
+    &.select2-container--open {
+        border-color: $theme-cyangreen-primary;
+    }
+        .select2-results__option--highlighted[aria-selected] {
+            background-color: $theme-cyangreen-primary;
+        }
+        .select2-search--dropdown {
+            .select2-search__field{
+                border-color: $theme-cyangreen-primary !important;
+            }        
+        }
+        &.select2-container--focus{
+            .select2-selection--multiple{
+                border-color: $theme-cyangreen-primary !important;
+            }
+        }
+        .select2-selection--multiple:focus{
+            border-color: $theme-cyangreen-primary !important;
+        } 
+        .select2-selection--multiple {
+            .select2-selection__choice{
+                background-color: $theme-cyangreen-primary;
+                border-color: $theme-cyangreen-primary;
+            }
+        }
+    }
+}
+
+/*---Other---*/
+
+.theme-cyangreen{
+    .myadmin-dd{
+        .dd-list{
+            .dd-list{
+                .dd-handle:hover{
+                    color: darken($theme-cyangreen-primary, 10%);
+                }
+            }
+        }
+    }
+    .myadmin-dd-empty{
+        .dd-list{
+            .dd3-handle:hover{
+                color: darken($theme-cyangreen-primary, 10%);
+            }
+            .dd3-content:hover{
+                color: darken($theme-cyangreen-primary, 10%);
+            }
+        }        
+    }
+    [data-overlay-primary]::before{
+        background: darken($theme-cyangreen-primary, 10%);
+    }
+}
+
+
+/*---wizard---*/
+
+.theme-cyangreen{
+    .wizard-content{
+        .wizard{
+            >.steps{
+                >ul{
+                    >li{
+                    &.current{
+                        border: 2px solid $theme-cyangreen-primary;
+                        background-color: $theme-cyangreen-primary;
+                    } 
+                     &.done{
+                        border-color: darken($theme-cyangreen-primary, 10%);
+                        background-color: darken($theme-cyangreen-primary, 10%);
+                    } 
+                    }
+                }
+            }
+            >.actions{
+                >ul{
+                    >li{
+                        >a{
+                            background-color: $theme-cyangreen-primary;
+                        }
+                    }
+                }
+            }
+        &.wizard-circle{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-cyangreen-primary;
+                        }
+                       &:before{
+                            background-color: $theme-cyangreen-primary;
+                        }
+                    }
+                }
+            }
+        } 
+        &.wizard-notification{
+            >.steps{
+                >ul{
+                    >li{
+                       &:after{
+                            background-color: $theme-cyangreen-primary;
+                        }
+                       &:before{
+                            background-color: $theme-cyangreen-primary;
+                        }
+                        &.current{
+                            .step{
+                                border: 2px solid $theme-cyangreen-primary;
+                                color: $theme-cyangreen-primary;
+                                &:after{
+                                    border-top-color: $theme-cyangreen-primary;
+                                }
+                            }
+                        }
+                        &.done{
+                            .step{
+                                &:after{
+                                    border-top-color: $theme-cyangreen-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        } 
+        }
+    }
+}
+// Small devices
+@include screen-sm-max {
+    .theme-cyangreen{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &:last-child{
+                                &:after{
+                                    background-color: $theme-cyangreen-primary;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+// Small devices
+@include screen-xs {
+    .theme-cyangreen{
+        .wizard-content{
+            .wizard{
+                >.steps{
+                    >ul{
+                        >li{
+                            &.current{
+                                &:after{
+                                    background-color: $theme-cyangreen-primary; 
+                                } 
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+ /*---slider---*/
+.theme-cyangreen{
+    #primary {
+        .slider-selection{
+            background-color: $theme-cyangreen-primary;
+        }
+    }
+    #info {
+        .slider-selection{
+            background-color: $theme-cyangreen-info;
+        }
+    }
+    #success {
+        .slider-selection{
+            background-color: $theme-cyangreen-success;
+        }
+    }
+    #danger {
+        .slider-selection{
+            background-color: $theme-cyangreen-danger;
+        }
+    }
+    #warning {
+        .slider-selection{
+            background-color: $theme-cyangreen-warning;
+        }
+    }
+}
+
+/*---horizontal-timeline---*/
+
+.theme-cyangreen{
+    .cd-horizontal-timeline{
+        .events{
+            a{
+                &.selected{
+                    &::after{
+                        background: $theme-cyangreen-primary;
+	                    border-color: $theme-cyangreen-primary;
+                    }
+                }
+                &.older-event::after{
+                    border-color: $theme-cyangreen-primary;
+                }
+            }
+        }
+        .filling-line{
+            background: $theme-cyangreen-primary;
+        }
+        a{
+            color: $theme-cyangreen-primary; 
+            @include hover-focus-state{
+                color: $theme-cyangreen-primary;    
+            }
+        }
+    }
+    .cd-timeline-navigation{
+        a{
+            @include hover-focus-state{
+                border-color: $theme-cyangreen-primary;    
+            }
+        }
+    }
+}
