@@ -35,6 +35,16 @@ export const MainSidebar = () => {
               <span>FX Mkt Locations</span>
             </NavLink>
           </li>
+          <li
+            className={`${
+              location.pathname === "/states" ? "active" : ""
+            }`}
+          >
+            <NavLink to="/states">
+              <i className="mdi mdi-minus-network"></i>
+              <span>States</span>
+            </NavLink>
+          </li>
         </ul>
       </section>
     </aside>

@@ -1,11 +1,10 @@
-export interface fxMarketType {
-    location_name: string;
-    location_state: string;
+export interface stateType {
     id: string;
+    state_name: string;
     createdAt: Date;
 }
 
-interface fxMarketStateProps {
+interface stateStateProps {
     //fetching
     fetching: boolean,
     fetchingById: boolean,
@@ -13,7 +12,7 @@ interface fxMarketStateProps {
     updating: boolean,
     deleting: boolean,
     //data
-    fetchData: Array<fxMarketType>,
+    fetchData: Array<stateType>,
     fetchByIdData: any,
     createData: any,
     updateData: any,
@@ -27,7 +26,7 @@ interface fxMarketStateProps {
 }
 
 
-export const fxMarketState: fxMarketStateProps = {
+export const stateState: stateStateProps = {
      //processing
      fetching: false,
      fetchingById: false,

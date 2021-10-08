@@ -27,15 +27,25 @@ export const UpdateFxMarket: FC<aProps> = (props) => {
   const formik = useFormik({
     initialValues: {
       location_name: selectedFxMarket.location_name,
+      location_state: {
+        value: "",
+        label: ""
+      }
     },
     onSubmit: (values) => {
       updateFxMarket(dispatch, {
         id: selectedFxMarket.id,
-        updateData: values
+        updateData: {
+          location_name: values.location_name,
+          location_state: values.location_state.value
+        }
       });
     },
     validationSchema: Yup.object({
       location_name: Yup.string().required("Please enter market location"),
+      location_state: Yup.object().shape({
+        value: Yup.string().required("Please select location state"),
+      }),
     }),
   });
 

@@ -2,10 +2,12 @@ import { useFormik } from "formik";
 import React, { FC, useEffect } from "react";
 import { Alert, Button, Modal, Spinner } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
-import { resetCurrency } from "../../../redux/reducers/Currencies/currencySlice";
 import * as Yup from "yup";
 import { RootState } from "../../../redux/store";
 import { createFxMarket } from "../../../redux/reducers/FxMarkets/apiCalls";
+import Select from "react-select";
+import { resetFxMarket } from "../../../redux/reducers/FxMarkets/fxMarketSlice";
+import { getAllStates } from "../../../redux/reducers/States/apiCalls";
 
 interface aProps {
   setShowAddModal: React.Dispatch<React.SetStateAction<boolean>>;
@@ -16,16 +18,28 @@ export const AddFxMarket: FC<aProps> = (props) => {
   const dispatch = useDispatch();
   const { setShowAddModal, showAddModal, fetchFxMarkets } = props;
   const fxmarkets = useSelector((state: RootState) => state.fxmarkets);
+  const states = useSelector((state: RootState) => state.states);
+
+  useEffect(() => {
+    getAllStates(dispatch);
+  }, []);
 
   const formik = useFormik({
     initialValues: {
       location_name: "",
+      location_state: { value: "", label: "-location state-" },
     },
     onSubmit: (values) => {
-      createFxMarket(dispatch, values);
+      createFxMarket(dispatch, {
+        ...values,
+        location_state: values.location_state.value,
+      });
     },
     validationSchema: Yup.object({
-      location_name: Yup.string().required("Please enter currency name"),
+      location_name: Yup.string().required("Please enter state name"),
+      location_state: Yup.object().shape({
+        value: Yup.string().required("Please select location state"),
+      }),
     }),
   });
 
@@ -39,7 +53,7 @@ export const AddFxMarket: FC<aProps> = (props) => {
     <Modal
       show={showAddModal}
       onHide={() => {
-        dispatch(resetCurrency());
+        dispatch(resetFxMarket());
         setShowAddModal(false);
         fetchFxMarkets();
       }}
@@ -73,14 +87,42 @@ export const AddFxMarket: FC<aProps> = (props) => {
               />
             </div>
           </div>
+
+          <div className="form-group">
+            <label className="col-md-12">Location State</label>
+            <div className="col-md-12">
+              <Select
+                name="location_state"
+                value={formik.values.location_state}
+                getOptionLabel={(e) => e?.label}
+                getOptionValue={(e) => e.value}
+                options={states.fetchData.map((st) => {
+                  return {
+                    value: st.id,
+                    label: `${st.state_name}`,
+                  };
+                })}
+                isLoading={states.fetching}
+                onChange={(value) => {
+                  formik.setFieldValue("location_state", value);
+                }}
+              />
+              {formik.errors.location_state?.value && (
+                <div className="text-danger">
+                  {formik.errors.location_state.value}
+                </div>
+              )}
+            </div>
+          </div>
         </form>
+        <pre>{JSON.stringify(formik.errors, null, 2)}</pre>
       </Modal.Body>
       <Modal.Footer>
         <div className="d-flex justify-content-between">
           <Button
             variant="secondary"
             onClick={() => {
-              dispatch(resetCurrency());
+              dispatch(resetFxMarket());
               setShowAddModal(false);
               fetchFxMarkets();
             }}
