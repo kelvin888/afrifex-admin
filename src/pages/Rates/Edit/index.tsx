@@ -191,6 +191,8 @@ export const UpdateRate: FC<aProps> = (props) => {
             </div>
           </div>
         </form>
+        <pre>{JSON.stringify(formik.values, null, 2)}</pre>
+        <pre>{JSON.stringify(formik.values, null, 2)}</pre>
       </Modal.Body>
       <Modal.Footer>
         <div className="d-flex justify-content-between">

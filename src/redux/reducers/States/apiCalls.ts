@@ -30,19 +30,14 @@ export const getAllStates = async (dispatch: any) => {
 export const getStateById = async (dispatch: any, id: string) => {
   dispatch(fetchingStateById());
   try {
-    const res = await axiosInstance.get(
-      `States/GetStateById/${id}`
-    );
+    const res = await axiosInstance.get(`States/GetStateById/${id}`);
     dispatch(fetchStateByIdSuccess(res.data));
   } catch (err) {
     dispatch(fetchStateByIdSuccess(err));
   }
 };
 
-export const createState = async (
-  dispatch: any,
-  payload: newState
-) => {
+export const createState = async (dispatch: any, payload: newState) => {
   dispatch(createingState());
   try {
     const res = await axiosInstance.post("States", payload);
@@ -58,7 +53,7 @@ export const updateState = async (
 ) => {
   dispatch(updatingState());
   try {
-    const res = await axiosInstance.patch(
+    const res = await axiosInstance.put(
       `States/${payload.id}`,
       payload.updateData
     );

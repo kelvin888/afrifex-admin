@@ -30,19 +30,14 @@ export const getAllCurrency = async (dispatch: any) => {
 export const getCurrencyById = async (dispatch: any, id: string) => {
   dispatch(fetchingACById());
   try {
-    const res = await axiosInstance.get(
-      `Currencies/GetCurrencyById/${id}`
-    );
+    const res = await axiosInstance.get(`Currencies/GetCurrencyById/${id}`);
     dispatch(fetchACByIdSuccess(res.data));
   } catch (err) {
     dispatch(fetchACByIdSuccess(err));
   }
 };
 
-export const createCurrency = async (
-  dispatch: any,
-  payload: newCurrency
-) => {
+export const createCurrency = async (dispatch: any, payload: newCurrency) => {
   dispatch(createingAC());
   try {
     const res = await axiosInstance.post("Currencies", payload);
@@ -58,7 +53,7 @@ export const updateCurrency = async (
 ) => {
   dispatch(updatingAC());
   try {
-    const res = await axiosInstance.patch(
+    const res = await axiosInstance.put(
       `Currencies/${payload.id}`,
       payload.updateData
     );
