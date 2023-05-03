@@ -20,8 +20,8 @@ import {
 export const getAllRates = async (dispatch: any) => {
   dispatch(fetchingRate());
   try {
-    const res = await axiosInstance.get("rates");
-    dispatch(fetchRateSuccess(res));
+    const res = await axiosInstance.get("rates/all");
+    dispatch(fetchRateSuccess(res.data));
   } catch (err) {
     dispatch(fetchRateFailed(err));
   }
@@ -30,19 +30,14 @@ export const getAllRates = async (dispatch: any) => {
 export const getRateById = async (dispatch: any, id: string) => {
   dispatch(fetchingRateById());
   try {
-    const res = await axiosInstance.get(
-      `Rates/GetRateById/${id}`
-    );
+    const res = await axiosInstance.get(`Rates/GetRateById/${id}`);
     dispatch(fetchRateByIdSuccess(res.data));
   } catch (err) {
     dispatch(fetchRateByIdSuccess(err));
   }
 };
 
-export const createRates = async (
-  dispatch: any,
-  payload: newRate
-) => {
+export const createRates = async (dispatch: any, payload: newRate) => {
   dispatch(createingRate());
   try {
     const res = await axiosInstance.post("rates", payload);

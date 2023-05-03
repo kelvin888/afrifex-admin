@@ -9,8 +9,7 @@ import EditImg from "../../assets/images/edit-icon.svg";
 import { AddRate } from "./Add";
 import { UpdateRate } from "./Edit";
 import { rateFetchType } from "../../redux/reducers/Rates/ratesState";
-import { Alert, Button, Modal, Spinner } from "react-bootstrap";
-import json5 from "json5";
+import { Button, Modal, Spinner } from "react-bootstrap";
 import { resetRate } from "../../redux/reducers/Rates/rateSlice";
 
 export const Rates = () => {
@@ -19,7 +18,7 @@ export const Rates = () => {
   const [showUpdateModal, setShowUpdateModal] = useState(false);
 
   const rates = useSelector((state: RootState) => state.rates);
-
+  const rates1 = useSelector((state: any) => state.rates.fetchData);
   const [selectedRate, setSelectedRate] = useState<rateFetchType>();
   const [showConfirm, setShowConfirm] = useState(false);
 
@@ -80,19 +79,19 @@ export const Rates = () => {
                   <tr>
                     <td>Location</td>
                     <td>Rate</td>
-                    <td>Date Created</td>
                     <td>Exchange</td>
+                    <td>Date Created</td>
                     <td>Action</td>
                   </tr>
-                  {rates?.fetchData.length > 0 ? (
+                  {rates1?.length > 0 ? (
                     <>
-                      {rates.fetchData.map((rate, index) => (
+                      {rates1?.map((rate: any, index: number) => (
                         <tr key={index}>
                           <td>{rate?.fx_market?.location_name}</td>
                           <td>{rate?.conversion_rate}</td>
                           <td>{`${rate?.currency_from?.currency_code} -> ${rate.currency_to?.currency_code}`}</td>
                           <td>
-                            {moment(rate.createdAt).format(
+                            {moment(rate?.createdAt).format(
                               "MMM, DD YYYY hh:mm"
                             )}
                           </td>

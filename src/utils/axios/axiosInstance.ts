@@ -1,8 +1,9 @@
 import axios from "axios";
 import { getLocalAccessToken, getLocalRefreshToken } from "../localStorage";
+const baseURL = process.env.REACT_APP_BASE_URL;
 
 const axiosInstance = axios.create({
-  baseURL: "https://afrifex-backend.vercel.app/api/",
+  baseURL: baseURL,
   headers: {
     "Content-Type": "application/json",
   },

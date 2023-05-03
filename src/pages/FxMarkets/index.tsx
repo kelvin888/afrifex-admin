@@ -19,9 +19,7 @@ export const FxMarkets = () => {
   const dispatch = useDispatch();
   const [showAddModal, setShowAddModal] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
-
   const fxmarkets = useSelector((state: RootState) => state.fxmarkets);
-
   const [selectedMarket, setSelectedMarket] = useState<fxMarketType>();
   const [showConfirm, setShowConfirm] = useState(false);
 
@@ -86,7 +84,7 @@ export const FxMarkets = () => {
                   </tr>
                   {fxmarkets?.fetchData.length > 0 ? (
                     <>
-                      {fxmarkets.fetchData.map((cur, index) => (
+                      {fxmarkets.fetchData.map((cur: any, index: number) => (
                         <tr key={index}>
                           <td>{cur?.location_name}</td>
                           <td>

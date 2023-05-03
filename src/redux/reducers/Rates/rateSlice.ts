@@ -11,7 +11,7 @@ export const rateSlice = createSlice({
     },
     fetchRateSuccess: (state, action) => {
       state.fetching = false;
-      state.fetchData = action.payload.data;
+      state.fetchData = action.payload;
     },
     fetchRateFailed: (state, action) => {
       state.fetching = false;
@@ -85,7 +85,7 @@ export const rateSlice = createSlice({
       state.createError = null;
       state.updateError = null;
       state.deleteError = null;
-    }
+    },
   },
 });
 
@@ -109,7 +109,7 @@ export const {
   updateRateFailed,
   deleteRateFailed,
   //reset
-  resetRate
+  resetRate,
 } = rateSlice.actions;
 
 export default rateSlice.reducer;

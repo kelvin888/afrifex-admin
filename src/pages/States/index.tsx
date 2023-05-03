@@ -3,7 +3,10 @@ import Skeleton from "react-loading-skeleton";
 import { useDispatch, useSelector } from "react-redux";
 import moment from "moment";
 import { Layout } from "../../components/Layout";
-import { deleteState, getAllStates } from "../../redux/reducers/States/apiCalls";
+import {
+  deleteState,
+  getAllStates,
+} from "../../redux/reducers/States/apiCalls";
 import { RootState } from "../../redux/store";
 import EditImg from "../../assets/images/edit-icon.svg";
 import { AddState } from "./Add";
@@ -16,9 +19,7 @@ export const States = () => {
   const dispatch = useDispatch();
   const [showAddModal, setShowAddModal] = useState(false);
   const [showUpdateModal, setShowUpdateModal] = useState(false);
-
   const states = useSelector((state: RootState) => state.states);
-
   const [selectedState, setSelectedState] = useState<stateType>();
   const [showConfirm, setShowConfirm] = useState(false);
 
